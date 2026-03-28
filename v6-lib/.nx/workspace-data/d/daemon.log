@@ -1,0 +1,18 @@
+[NX Daemon Server] - 2026-03-28T18:22:39.721Z - Started listening on: \\.\pipe\nx\C:\Users\prath\AppData\Local\Temp\972bd7f972168e8b5841\d.sock
+[NX Daemon Server] - 2026-03-28T18:22:39.753Z - [WATCHER]: Subscribed to changes within: D:\onecx\docs-onecx\v6 (native)
+[NX Daemon Server] - 2026-03-28T18:22:39.761Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-03-28T18:22:39.763Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2026-03-28T18:22:39.768Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-03-28T18:22:39.772Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2026-03-28T18:22:39.775Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2026-03-28T18:22:39.776Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2026-03-28T18:22:39.777Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2026-03-28T18:22:39.778Z - [WATCHER]: Stopping the watcher for D:\onecx\docs-onecx\v6 (sources)
+[NX Daemon Server] - 2026-03-28T18:22:39.779Z - [WATCHER]: Stopping the watcher for D:\onecx\docs-onecx\v6 (outputs)
+[NX Daemon Server] - 2026-03-28T18:22:39.781Z - Server stopped because: "Request to shutdown"
+
+> NX runtime error err=cannot send event from fs watcher: sending into a closed channel
+
+
+> NX runtime error err=cannot send event from fs watcher: sending into a closed channel
+

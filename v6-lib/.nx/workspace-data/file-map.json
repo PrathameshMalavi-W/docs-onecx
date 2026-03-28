@@ -1,0 +1,5820 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.4.0",
+  "pathMappings": {
+    "@onecx/accelerator": [
+      "libs/accelerator/src/index.ts"
+    ],
+    "@onecx/angular-accelerator": [
+      "libs/angular-accelerator/src/index.ts"
+    ],
+    "@onecx/angular-accelerator/testing": [
+      "libs/angular-accelerator/testing/index.ts"
+    ],
+    "@onecx/angular-auth": [
+      "libs/angular-auth/src/index.ts"
+    ],
+    "@onecx/angular-integration-interface": [
+      "libs/angular-integration-interface/src/index.ts"
+    ],
+    "@onecx/angular-integration-interface/mocks": [
+      "libs/angular-integration-interface/mocks/index.ts"
+    ],
+    "@onecx/angular-remote-components": [
+      "libs/angular-remote-components/src/index.ts"
+    ],
+    "@onecx/angular-remote-components/mocks": [
+      "libs/angular-remote-components/mocks/index.ts"
+    ],
+    "@onecx/angular-standalone-shell": [
+      "libs/angular-standalone-shell/src/index.ts"
+    ],
+    "@onecx/angular-testing": [
+      "libs/angular-testing/src/index.ts"
+    ],
+    "@onecx/angular-utils": [
+      "libs/angular-utils/src/index.ts"
+    ],
+    "@onecx/angular-webcomponents": [
+      "libs/angular-webcomponents/src/index.ts"
+    ],
+    "@onecx/integration-interface": [
+      "libs/integration-interface/src/index.ts"
+    ],
+    "@onecx/ngrx-accelerator": [
+      "libs/ngrx-accelerator/src/index.ts"
+    ],
+    "@onecx/nx-migration-utils": [
+      "libs/nx-migration-utils/src/index.ts"
+    ],
+    "@onecx/nx-migration-utils/angular": [
+      "libs/nx-migration-utils/src/lib/angular/index.ts"
+    ],
+    "@onecx/release": [
+      "tools/release/src/index.ts"
+    ],
+    "@onecx/shell-core": [
+      "libs/shell-core/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "eslint:lint"
+      }
+    }
+  ],
+  "fileMap": {
+    "projectFileMap": {
+      "angular-testing": [
+        {
+          "file": "libs/angular-testing/.eslintrc.json",
+          "hash": "15701163267843911051"
+        },
+        {
+          "file": "libs/angular-testing/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/angular-testing/README.md",
+          "hash": "8657035347732005681"
+        },
+        {
+          "file": "libs/angular-testing/jest.config.ts",
+          "hash": "10654672135815419371"
+        },
+        {
+          "file": "libs/angular-testing/migrations.json",
+          "hash": "5281957417375190776"
+        },
+        {
+          "file": "libs/angular-testing/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/angular-testing/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/angular-testing/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/angular-testing/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/ng-package.json",
+          "hash": "3417177917823195139"
+        },
+        {
+          "file": "libs/angular-testing/package.json",
+          "hash": "13429773814355719108",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:primeng",
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/project.json",
+          "hash": "7959888084649952946"
+        },
+        {
+          "file": "libs/angular-testing/sonar-project.properties",
+          "hash": "12861550945504086379"
+        },
+        {
+          "file": "libs/angular-testing/src/index.ts",
+          "hash": "14436393868224713493",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/button.harness.ts",
+          "hash": "3160907181071163796",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/div.harness.ts",
+          "hash": "11633668602335706638",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/input.harness.ts",
+          "hash": "10565459934538392547",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/list-item.harness.ts",
+          "hash": "12539473591717535265",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/menu-item-with-icon.harness.ts",
+          "hash": "11338485074349302414"
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/menu-item.harness.ts",
+          "hash": "14243471680574530411",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/p.harness.ts",
+          "hash": "5151582850177481403",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-accordion-tab.harness.ts",
+          "hash": "1078758111007387828",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-accordion.harness.ts",
+          "hash": "5500001293886080173",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-breadcrumb.harness.ts",
+          "hash": "6649547334164418407",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-button-directive.harness.ts",
+          "hash": "11188624494119678933",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-button.harness.ts",
+          "hash": "7945547312538767434",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-chart.harness.ts",
+          "hash": "11368479610902547991",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-checkbox.harness.ts",
+          "hash": "5616083739092811958",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-chip.harness.ts",
+          "hash": "14053574278933078202",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-dialog.harness.ts",
+          "hash": "17005467915128676232",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-menu-item.harness.ts",
+          "hash": "4128754922185131952",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-menu.harness.ts",
+          "hash": "8861346674538780082",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-menubar.harness.ts",
+          "hash": "15895153683550412934",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-multiSelect.harness.ts",
+          "hash": "9602591237583753121",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-multiSelectListItem.harness.ts",
+          "hash": "4035454428299954860",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-paginator.harness.ts",
+          "hash": "5710960395633980632",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-panelmenu-item.harness.ts",
+          "hash": "12965905210628259429",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-panelmenu.harness.ts",
+          "hash": "6782900305245960874",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-password.harness.ts",
+          "hash": "14394572606528228234",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-picklist.harness.ts",
+          "hash": "14521055921681797631",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-select.harness.ts",
+          "hash": "17708806614031603549",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-selectButton.harness.ts",
+          "hash": "16314341442524865002",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-tableCheckbox.harness.ts",
+          "hash": "3144626348967792434",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/primeng/p-togglebutton.harness.ts",
+          "hash": "11359247071117651770",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/span.harness.ts",
+          "hash": "7800056918675673210",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/table-header-column.harness.ts",
+          "hash": "9454381854116318153",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/table-row.harness.ts",
+          "hash": "11605655517926806302",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/harnesses/utils/primeicon.utils.ts",
+          "hash": "15937415069775413174",
+          "deps": [
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/lib/mocks/IntersectionObserverMock.ts",
+          "hash": "147429425809502345"
+        },
+        {
+          "file": "libs/angular-testing/src/lib/mocks/OriginMock.ts",
+          "hash": "6823384528837079632"
+        },
+        {
+          "file": "libs/angular-testing/src/lib/utils/waitForDeferredViewsToBeRendered.ts",
+          "hash": "3472704644613301795",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-testing/tsconfig.json",
+          "hash": "13526479005583886541"
+        },
+        {
+          "file": "libs/angular-testing/tsconfig.lib.json",
+          "hash": "11436971043388757076"
+        },
+        {
+          "file": "libs/angular-testing/tsconfig.lib.prod.json",
+          "hash": "15349319459182570289"
+        },
+        {
+          "file": "libs/angular-testing/tsconfig.spec.json",
+          "hash": "551998798317460917"
+        }
+      ],
+      "release": [
+        {
+          "file": "tools/release/.eslintrc.json",
+          "hash": "13999269612018720387"
+        },
+        {
+          "file": "tools/release/README.md",
+          "hash": "6714099318519266443"
+        },
+        {
+          "file": "tools/release/executors.json",
+          "hash": "18413500017677217851"
+        },
+        {
+          "file": "tools/release/jest.config.ts",
+          "hash": "7041900242890483592"
+        },
+        {
+          "file": "tools/release/package.json",
+          "hash": "3795825388790401034",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:tslib",
+            "npm:nx-release"
+          ]
+        },
+        {
+          "file": "tools/release/project.json",
+          "hash": "15900770404396443036"
+        },
+        {
+          "file": "tools/release/src/executors/npm-publish/executor.ts",
+          "hash": "7404173732740309455",
+          "deps": [
+            "npm:nx-release"
+          ]
+        },
+        {
+          "file": "tools/release/src/executors/npm-publish/schema.d.ts",
+          "hash": "13653728300216352356"
+        },
+        {
+          "file": "tools/release/src/executors/npm-publish/schema.json",
+          "hash": "7770031027487330361"
+        },
+        {
+          "file": "tools/release/src/executors/update-build-publish/executor.ts",
+          "hash": "15577569906797839066",
+          "deps": [
+            "npm:nx-release"
+          ]
+        },
+        {
+          "file": "tools/release/src/executors/update-build-publish/schema.d.ts",
+          "hash": "15448868020547759202"
+        },
+        {
+          "file": "tools/release/src/executors/update-build-publish/schema.json",
+          "hash": "15034799347528791966"
+        },
+        {
+          "file": "tools/release/src/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "tools/release/tsconfig.json",
+          "hash": "11201535905583862240"
+        },
+        {
+          "file": "tools/release/tsconfig.lib.json",
+          "hash": "17512648156706774563"
+        },
+        {
+          "file": "tools/release/tsconfig.spec.json",
+          "hash": "12478527556459153090"
+        }
+      ],
+      "angular-accelerator": [
+        {
+          "file": "libs/angular-accelerator/.eslintrc.json",
+          "hash": "17679586722739626936"
+        },
+        {
+          "file": "libs/angular-accelerator/.storybook/main.js",
+          "hash": "829675315106725858"
+        },
+        {
+          "file": "libs/angular-accelerator/.storybook/preview-head.html",
+          "hash": "7505832935143449921"
+        },
+        {
+          "file": "libs/angular-accelerator/.storybook/preview.ts",
+          "hash": "6125226252942342544",
+          "deps": [
+            "npm:@storybook/angular",
+            "npm:msw-storybook-addon"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/.storybook/storybook.css",
+          "hash": "13443914746101913320"
+        },
+        {
+          "file": "libs/angular-accelerator/.storybook/theme_defaults.scss",
+          "hash": "4147577090414534882"
+        },
+        {
+          "file": "libs/angular-accelerator/.storybook/tsconfig.json",
+          "hash": "2872184891761362894"
+        },
+        {
+          "file": "libs/angular-accelerator/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/angular-accelerator/README.md",
+          "hash": "6800587687307455209"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/i18n/de.json",
+          "hash": "2201104846144656455"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/i18n/en.json",
+          "hash": "11423595941027834381"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/i18n/storybook-translations/diagram/de.json",
+          "hash": "2690813687931374553"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/i18n/storybook-translations/diagram/en.json",
+          "hash": "1304738584186831311"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/i18n/storybook-translations/page-header/de.json",
+          "hash": "18287692051026940901"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/i18n/storybook-translations/page-header/en.json",
+          "hash": "15247759303241459461"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/images/placeholder.png",
+          "hash": "3407367389212314700"
+        },
+        {
+          "file": "libs/angular-accelerator/assets/styles.scss",
+          "hash": "936856611020027564"
+        },
+        {
+          "file": "libs/angular-accelerator/jest.config.ts",
+          "hash": "6678905950199523380"
+        },
+        {
+          "file": "libs/angular-accelerator/migrations.json",
+          "hash": "5281957417375190776"
+        },
+        {
+          "file": "libs/angular-accelerator/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/angular-accelerator/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/angular-accelerator/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/angular-accelerator/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/ng-package.json",
+          "hash": "12978180553479586862"
+        },
+        {
+          "file": "libs/angular-accelerator/package.json",
+          "hash": "7721380738839312269",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/cdk",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:@ngx-translate/core",
+            "npm:@ngx-translate/http-loader",
+            "npm:@ngneat/until-destroy",
+            "integration-interface",
+            "accelerator",
+            "angular-integration-interface",
+            "angular-remote-components",
+            "angular-testing",
+            "angular-utils",
+            "npm:chart.js",
+            "npm:d3-scale-chromatic",
+            "npm:fast-deep-equal",
+            "npm:rxjs",
+            "npm:primeng",
+            "npm:@storybook/angular",
+            "npm:@nx/devkit",
+            "nx-migration-utils",
+            "npm:@primeng/themes"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/project.json",
+          "hash": "10891713053100572775"
+        },
+        {
+          "file": "libs/angular-accelerator/sonar-project.properties",
+          "hash": "8851316866562068664"
+        },
+        {
+          "file": "libs/angular-accelerator/src/index.ts",
+          "hash": "13326154683244684243"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/angular-accelerator-primeng.module.ts",
+          "hash": "17380617129016078194",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/angular-accelerator.module.ts",
+          "hash": "1079152951032346239",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/router",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "angular-remote-components",
+            "npm:rxjs",
+            "angular-utils",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/column-group-selection/column-group-selection.component.html",
+          "hash": "430552028969470039"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/column-group-selection/column-group-selection.component.scss",
+          "hash": "12713887440641044365"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/column-group-selection/column-group-selection.component.ts",
+          "hash": "14759252082910567695",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content-container/content-container.component.html",
+          "hash": "9387089431557381505"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content-container/content-container.component.spec.ts",
+          "hash": "7488748192748004545",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/cdk",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content-container/content-container.component.stories.ts",
+          "hash": "4951371688601144477",
+          "deps": [
+            "npm:@storybook/angular"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content-container/content-container.component.ts",
+          "hash": "879381200536475601",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content/content.component.html",
+          "hash": "15305184889250262030"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content/content.component.spec.ts",
+          "hash": "13320382842544294508",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/cdk",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content/content.component.stories.ts",
+          "hash": "11933579587606232458",
+          "deps": [
+            "npm:@storybook/angular"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/content/content.component.ts",
+          "hash": "16730142732433580422",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/custom-group-column-selector/custom-group-column-selector.component.html",
+          "hash": "8436906675227700703"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/custom-group-column-selector/custom-group-column-selector.component.scss",
+          "hash": "5689972168036952853"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/custom-group-column-selector/custom-group-column-selector.component.spec.ts",
+          "hash": "9535992684813541716",
+          "deps": [
+            "npm:@angular/core",
+            "npm:ngx-translate-testing",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/custom-group-column-selector/custom-group-column-selector.component.stories.ts",
+          "hash": "15550672499450545001",
+          "deps": [
+            "npm:@storybook/angular",
+            "npm:@ngx-translate/core",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/forms",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/custom-group-column-selector/custom-group-column-selector.component.ts",
+          "hash": "12677356641949426765",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-layout-selection/data-layout-selection.component.html",
+          "hash": "9457714571146626692"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-layout-selection/data-layout-selection.component.scss",
+          "hash": "7210794306321218851"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-layout-selection/data-layout-selection.component.spec.ts",
+          "hash": "4607265219385342374",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-layout-selection/data-layout-selection.component.ts",
+          "hash": "16290184627514198150",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid-sorting/data-list-grid-sorting.component.html",
+          "hash": "8971372432673591217"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid-sorting/data-list-grid-sorting.component.scss",
+          "hash": "18153808029516795837"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid-sorting/data-list-grid-sorting.component.spec.ts",
+          "hash": "13716239062528361432",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:ngx-translate-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid-sorting/data-list-grid-sorting.component.ts",
+          "hash": "13818984771083877532",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid/data-list-grid.component.html",
+          "hash": "12148770475712777752"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid/data-list-grid.component.scss",
+          "hash": "13063452846751263417"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid/data-list-grid.component.spec.ts",
+          "hash": "14438565004672384178",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "npm:ngx-translate-testing",
+            "npm:primeng",
+            "angular-testing",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid/data-list-grid.component.stories.ts",
+          "hash": "13763720766176055517",
+          "deps": [
+            "npm:@storybook/angular",
+            "npm:@angular/router",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:primeng",
+            "angular-integration-interface",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-list-grid/data-list-grid.component.ts",
+          "hash": "13520123299329608647",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "integration-interface",
+            "npm:primeng",
+            "npm:rxjs",
+            "angular-utils",
+            "npm:@angular/cdk",
+            "npm:fast-deep-equal"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-sort-base/data-sort-base.ts",
+          "hash": "2871468495843534043",
+          "deps": [
+            "npm:@ngx-translate/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-table/data-table.component.html",
+          "hash": "14495302268940328551"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-table/data-table.component.scss",
+          "hash": "5924182578621238674"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-table/data-table.component.spec.ts",
+          "hash": "4732977032612214251",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "angular-testing",
+            "npm:ngx-translate-testing",
+            "angular-utils",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-table/data-table.component.stories.ts",
+          "hash": "4280149599600667808",
+          "deps": [
+            "npm:@angular/platform-browser",
+            "npm:@angular/core",
+            "npm:@storybook/angular",
+            "npm:primeng",
+            "angular-integration-interface",
+            "npm:@angular/forms",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-table/data-table.component.ts",
+          "hash": "14287530653267889987",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@ngx-translate/core",
+            "accelerator",
+            "angular-integration-interface",
+            "npm:primeng",
+            "npm:rxjs",
+            "angular-utils",
+            "npm:@angular/cdk",
+            "npm:fast-deep-equal"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-view/data-view.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-view/data-view.component.html",
+          "hash": "5001501709239391217"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-view/data-view.component.spec.ts",
+          "hash": "6145482797373909069",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:ngx-translate-testing",
+            "npm:primeng",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/data-view/data-view.component.ts",
+          "hash": "16669596031575600865",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/diagram/diagram.component.html",
+          "hash": "8718988100462130769"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/diagram/diagram.component.scss",
+          "hash": "3288757315219443283"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/diagram/diagram.component.spec.ts",
+          "hash": "10585893628594246100",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/forms",
+            "npm:@ngx-translate/core",
+            "npm:jest-canvas-mock",
+            "npm:primeng",
+            "npm:ngx-translate-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/diagram/diagram.component.stories.ts",
+          "hash": "16944931994583207358",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/forms",
+            "npm:@storybook/angular",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/diagram/diagram.component.ts",
+          "hash": "11877828973186851148",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:chart.js",
+            "npm:d3-scale-chromatic",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-content/dialog-content.component.html",
+          "hash": "4921706007937257986"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-content/dialog-content.component.scss",
+          "hash": "5663863960532356819"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-content/dialog-content.component.spec.ts",
+          "hash": "17304066994800679933",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "npm:rxjs",
+            "npm:ngx-translate-testing",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-content/dialog-content.component.ts",
+          "hash": "14336392852914061024",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-footer/dialog-footer.component.html",
+          "hash": "5154657293307085057"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-footer/dialog-footer.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-footer/dialog-footer.component.spec.ts",
+          "hash": "3283583291344900159",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "npm:ngx-translate-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-footer/dialog-footer.component.ts",
+          "hash": "5701145781030843712",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-inline/dialog-inline.component.html",
+          "hash": "12198116230490394999"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-inline/dialog-inline.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-inline/dialog-inline.component.spec.ts",
+          "hash": "14404519628278048084",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "npm:ngx-translate-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-inline/dialog-inline.component.stories.ts",
+          "hash": "7121780976453292461",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@storybook/angular",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-inline/dialog-inline.component.ts",
+          "hash": "11904024673854082937",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-message-content/dialog-message-content.component.html",
+          "hash": "1933878753717639942"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/dialog/dialog-message-content/dialog-message-content.component.ts",
+          "hash": "4319372696197287463",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/error-component/global-error.component.html",
+          "hash": "17571052062379227014"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/error-component/global-error.component.scss",
+          "hash": "10744752469567763697"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/error-component/global-error.component.ts",
+          "hash": "14072923068658178837",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/filter-view/filter-view.component.html",
+          "hash": "10207750617899329396"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/filter-view/filter-view.component.scss",
+          "hash": "1795169862922873208"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/filter-view/filter-view.component.ts",
+          "hash": "18106218646070283129",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/group-by-count-diagram/group-by-count-diagram.component.html",
+          "hash": "4131873847543199446"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/group-by-count-diagram/group-by-count-diagram.component.spec.ts",
+          "hash": "9291189055561158623",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:jest-canvas-mock",
+            "npm:rxjs",
+            "npm:@angular/forms",
+            "npm:ngx-translate-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/group-by-count-diagram/group-by-count-diagram.component.stories.ts",
+          "hash": "3901029964541036741",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@storybook/angular",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/group-by-count-diagram/group-by-count-diagram.component.ts",
+          "hash": "2874288413084954681",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/interactive-data-view/interactive-data-view-filter-view.component.stories.ts",
+          "hash": "16972349919017780540",
+          "deps": [
+            "npm:@storybook/angular"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/interactive-data-view/interactive-data-view.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/interactive-data-view/interactive-data-view.component.html",
+          "hash": "13041078344086577549"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/interactive-data-view/interactive-data-view.component.spec.ts",
+          "hash": "30254405064095902",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "angular-remote-components",
+            "angular-testing",
+            "npm:ngx-translate-testing",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/interactive-data-view/interactive-data-view.component.stories.ts",
+          "hash": "6586830175495618219",
+          "deps": [
+            "npm:@storybook/angular"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/interactive-data-view/interactive-data-view.component.ts",
+          "hash": "7395377038274490160",
+          "deps": [
+            "npm:@angular/core",
+            "angular-remote-components",
+            "npm:primeng",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/interactive-data-view/storybook-config.ts",
+          "hash": "2074462894337953277",
+          "deps": [
+            "npm:@storybook/angular",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "angular-integration-interface",
+            "npm:@angular/router",
+            "angular-remote-components",
+            "npm:rxjs",
+            "npm:primeng",
+            "npm:@angular/forms",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/lifecycle/lifecycle.component.html",
+          "hash": "1728306015743261033"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/lifecycle/lifecycle.component.spec.ts",
+          "hash": "6258219119690518243",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "npm:@angular/platform-browser",
+            "npm:ngx-translate-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/lifecycle/lifecycle.component.stories.ts",
+          "hash": "15415021665431964148",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@storybook/angular",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/lifecycle/lifecycle.component.ts",
+          "hash": "10814470191814833950",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/loading-indicator/loading-indicator.component.html",
+          "hash": "12774509274343710150"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/loading-indicator/loading-indicator.component.scss",
+          "hash": "17253813241115130350"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/loading-indicator/loading-indicator.component.stories.ts",
+          "hash": "12972630292383930161",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@storybook/angular"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/loading-indicator/loading-indicator.component.ts",
+          "hash": "7093296597727017767",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/page-header/page-header.component.html",
+          "hash": "2672929092112532616"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/page-header/page-header.component.scss",
+          "hash": "18364283573119478439"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/page-header/page-header.component.spec.ts",
+          "hash": "11204408537666884274",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "angular-integration-interface",
+            "npm:ngx-translate-testing",
+            "npm:primeng",
+            "angular-utils",
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/page-header/page-header.component.stories.ts",
+          "hash": "6924996770811661298",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:@storybook/addon-actions",
+            "npm:@storybook/angular",
+            "npm:primeng",
+            "angular-integration-interface",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/page-header/page-header.component.ts",
+          "hash": "15359463728063426280",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "npm:primeng",
+            "npm:rxjs",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/search-header/search-header.component.html",
+          "hash": "7780741804376228435"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/search-header/search-header.component.spec.ts",
+          "hash": "1710827848198805855",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "angular-integration-interface",
+            "npm:ngx-translate-testing",
+            "npm:primeng",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/search-header/search-header.component.ts",
+          "hash": "1250020928443627554",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "accelerator",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/components/search-header/search-header.stories.ts",
+          "hash": "5414510119801920447",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/router",
+            "npm:@storybook/angular",
+            "npm:primeng",
+            "angular-integration-interface",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/advanced.directive.ts",
+          "hash": "4248283441610420716",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/basic.directive.ts",
+          "hash": "16474551201864946722",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/content-container.directive.ts",
+          "hash": "1035443196776209238",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/content.directive.ts",
+          "hash": "833003315834232869",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/if-breakpoint.directive.ts",
+          "hash": "993270888961190216",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/if-permission.directive.spec.ts",
+          "hash": "6947127386171889629",
+          "deps": [
+            "npm:@angular/core",
+            "angular-utils",
+            "npm:rxjs",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/if-permission.directive.ts",
+          "hash": "15540476503433047027",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "angular-utils",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/loading-indicator.directive.scss",
+          "hash": "917681888617027316"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/loading-indicator.directive.spec.ts",
+          "hash": "7343580248713425881",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/loading-indicator.directive.ts",
+          "hash": "10657183521413262781",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/src.directive.ts",
+          "hash": "2677055922514377304",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/template.directive.spec.ts",
+          "hash": "1832407549492110886",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/template.directive.ts",
+          "hash": "7664452637098341374",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/tooltip.directive.spec.ts",
+          "hash": "12921052167462773632",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/tooltip.directive.ts",
+          "hash": "1345650255822511206",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/directives/tooltipOnOverflow.directive.ts",
+          "hash": "10546863125069121678",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/functions/at-least-one-field-filled-validator.ts",
+          "hash": "16262254205992441279",
+          "deps": [
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/functions/flatten-object.spec.ts",
+          "hash": "16193900716830023923"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/functions/flatten-object.ts",
+          "hash": "1499937087350899340"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/injection-tokens/has-permission-checker.ts",
+          "hash": "13848657319186802586",
+          "deps": [
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/breadcrumb-menu-item.model.ts",
+          "hash": "8875494358138465560",
+          "deps": [
+            "npm:@angular/router",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/button-dialog.ts",
+          "hash": "1352582222467007587",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/column-type.model.ts",
+          "hash": "14415658590710606705"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/data-action.ts",
+          "hash": "7910950682273281631"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/data-column-name-id.model.ts",
+          "hash": "7065076763430254464"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/data-sort-direction.ts",
+          "hash": "2653138492392071690"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/data-table-column.model.ts",
+          "hash": "17801266364325369931"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/diagram-column.ts",
+          "hash": "1438341580012477386"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/diagram-data.ts",
+          "hash": "7737913033078675406"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/diagram-type.ts",
+          "hash": "9560307582754974482"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/filter.model.ts",
+          "hash": "10996610795476411812"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/model/translation.model.ts",
+          "hash": "13823712065504804613"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/pipes/dynamic.pipe.ts",
+          "hash": "3023975721014791821",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/pipes/ocxtimeago.pipe.ts",
+          "hash": "9966944317884123503",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/pipes/relative-date.pipe.ts",
+          "hash": "142685490670568233",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/services/breadcrumb.service.ts",
+          "hash": "3712672176890926360",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@ngneat/until-destroy",
+            "npm:@ngx-translate/core",
+            "accelerator",
+            "npm:primeng",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/services/export-data-service.spec.ts",
+          "hash": "14262386650015712602",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:ngx-translate-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/services/export-data.service.ts",
+          "hash": "14256937084601495511",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/services/portal-dialog-service.stories.ts",
+          "hash": "13602606589810237528",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@storybook/angular",
+            "npm:primeng",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/services/portal-dialog.service.spec.ts",
+          "hash": "6818201541219489761",
+          "deps": [
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:ngx-translate-testing",
+            "npm:primeng",
+            "npm:rxjs",
+            "angular-testing",
+            "angular-integration-interface",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/services/portal-dialog.service.ts",
+          "hash": "17638811276897169959",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:primeng",
+            "npm:rxjs",
+            "npm:@angular/router",
+            "angular-utils",
+            "angular-remote-components",
+            "integration-interface",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/storybook-breadcrumb.module.ts",
+          "hash": "8278360930346172115",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/storybook-theme.module.ts",
+          "hash": "5040102801302622329",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "npm:@primeng/themes",
+            "npm:@angular/platform-browser",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/storybook-translate.module.ts",
+          "hash": "10856055320227458329",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:@ngx-translate/http-loader",
+            "angular-integration-interface",
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/colorutils.ts",
+          "hash": "1055509911601545940"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/criteria.utils.ts",
+          "hash": "5305966978441738459",
+          "deps": [
+            "npm:@angular/core",
+            "accelerator",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/data-operation-strategy.spec.ts",
+          "hash": "288706013293759074",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/data-operation-strategy.ts",
+          "hash": "2960084096815768264"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/dateutils.ts",
+          "hash": "11288700014701618538",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/dynamic-locale-id.ts",
+          "hash": "8010764240055739864",
+          "deps": [
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/enum-to-dropdown-options.utils.ts",
+          "hash": "12757288258164850083",
+          "deps": [
+            "npm:@ngx-translate/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/filter.utils.ts",
+          "hash": "13736205670530964895"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/image-logo-url.utils.ts",
+          "hash": "7154500189360432053"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/objectutils.ts",
+          "hash": "3318978157012144719"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/primeicon.utils.ts",
+          "hash": "3589850411801957863",
+          "deps": [
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/rxjs-utils.ts",
+          "hash": "12875561042102091502",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/string-and-array-helper-functions.utils.spec.ts",
+          "hash": "11433473814313442676"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/string-and-array-helper-functions.utils.ts",
+          "hash": "3756344041178868861"
+        },
+        {
+          "file": "libs/angular-accelerator/src/lib/utils/template.utils.ts",
+          "hash": "10526246444456449395",
+          "deps": [
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/src/test-setup.ts",
+          "hash": "8678348892760176968",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/column-group-selection.harness.ts",
+          "hash": "10899388251734262397",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/content-container.harness.ts",
+          "hash": "6309766619603330252",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/content.harness.ts",
+          "hash": "3163535843938114453",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/custom-group-column-selector.harness.ts",
+          "hash": "12803688414519159144",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/data-layout-selection.harness.ts",
+          "hash": "14245287109877920850",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/data-list-grid.harness.ts",
+          "hash": "17227622418760770927",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/data-table.harness.ts",
+          "hash": "6176161485467837022",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/data-view.harness.ts",
+          "hash": "17654013791760328382",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/default-grid-item.harness.ts",
+          "hash": "7554898050464142182",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/default-list-item.harness.ts",
+          "hash": "997700447470590716",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/diagram.harness.ts",
+          "hash": "6015739119957728218",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/dialog-content.harness.ts",
+          "hash": "14999469692661009240",
+          "deps": [
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/dialog-footer.harness.ts",
+          "hash": "11964419898083305518",
+          "deps": [
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/dialog-inline.harness.ts",
+          "hash": "11980002513590681178",
+          "deps": [
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/dialog-message-content.harness.ts",
+          "hash": "2173350306097007915",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/filter-view.harness.ts",
+          "hash": "13169749876253984389",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/group-by-count-diagram.harness.ts",
+          "hash": "12245015076486288335",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/index.ts",
+          "hash": "14038467557047692494",
+          "deps": [
+            "angular-testing",
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/interactive-data-view.harness.ts",
+          "hash": "16840338988049408295",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/lifecycle.harness.ts",
+          "hash": "17313255118337096579",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/more-actions-menu-button.harness.ts",
+          "hash": "3587138190291894262",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/ng-package.json",
+          "hash": "1119559934507172693"
+        },
+        {
+          "file": "libs/angular-accelerator/testing/page-header.harness.ts",
+          "hash": "14173039639041238498",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/search-header.harness.ts",
+          "hash": "6326092958806913882",
+          "deps": [
+            "npm:@angular/cdk",
+            "angular-testing"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/slot.harness.ts",
+          "hash": "12537622041232443876",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/testing/tooltip.harness.ts",
+          "hash": "15938741730937024655",
+          "deps": [
+            "npm:@angular/cdk"
+          ]
+        },
+        {
+          "file": "libs/angular-accelerator/tsconfig.json",
+          "hash": "6963477291237217731"
+        },
+        {
+          "file": "libs/angular-accelerator/tsconfig.lib.json",
+          "hash": "18051065787704875903"
+        },
+        {
+          "file": "libs/angular-accelerator/tsconfig.lib.prod.json",
+          "hash": "15349319459182570289"
+        },
+        {
+          "file": "libs/angular-accelerator/tsconfig.spec.json",
+          "hash": "551998798317460917"
+        }
+      ],
+      "angular-auth": [
+        {
+          "file": "libs/angular-auth/.eslintrc.json",
+          "hash": "15701163267843911051"
+        },
+        {
+          "file": "libs/angular-auth/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/angular-auth/README.md",
+          "hash": "10513218239725051592"
+        },
+        {
+          "file": "libs/angular-auth/jest.config.ts",
+          "hash": "7829328261178653453"
+        },
+        {
+          "file": "libs/angular-auth/migrations.json",
+          "hash": "5281957417375190776"
+        },
+        {
+          "file": "libs/angular-auth/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/angular-auth/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/angular-auth/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/angular-auth/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/ng-package.json",
+          "hash": "654684297630312151"
+        },
+        {
+          "file": "libs/angular-auth/package-lock.json",
+          "hash": "2722502734006165829"
+        },
+        {
+          "file": "libs/angular-auth/package.json",
+          "hash": "5630976467127216221",
+          "deps": [
+            "npm:@angular-architects/module-federation",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "integration-interface",
+            "npm:keycloak-js",
+            "npm:rxjs",
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/project.json",
+          "hash": "4815072514647696597"
+        },
+        {
+          "file": "libs/angular-auth/sonar-project.properties",
+          "hash": "7390790737519272007"
+        },
+        {
+          "file": "libs/angular-auth/src/index.ts",
+          "hash": "1733336696129347286"
+        },
+        {
+          "file": "libs/angular-auth/src/lib/angular-auth.module.ts",
+          "hash": "6950315206223684872",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/src/lib/auth-proxy.service.ts",
+          "hash": "8580538173337054861",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/src/lib/auth-service-wrapper.ts",
+          "hash": "973770405224246780",
+          "deps": [
+            "npm:@angular-architects/module-federation",
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/src/lib/auth.service.ts",
+          "hash": "5411216527594146153"
+        },
+        {
+          "file": "libs/angular-auth/src/lib/auth_services/disabled-auth.service.ts",
+          "hash": "16877283406217892782",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/src/lib/auth_services/keycloak-auth.service.ts",
+          "hash": "1227162348037194007",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            [
+              "npm:keycloak-js",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "libs/angular-auth/src/lib/auth_services/keycloak.types.ts",
+          "hash": "7065492545780558124"
+        },
+        {
+          "file": "libs/angular-auth/src/lib/declarations.ts",
+          "hash": "7974618419059674023"
+        },
+        {
+          "file": "libs/angular-auth/src/lib/token.interceptor.ts",
+          "hash": "14689397577677413215",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-auth/tsconfig.json",
+          "hash": "1074750476616482822"
+        },
+        {
+          "file": "libs/angular-auth/tsconfig.lib.json",
+          "hash": "9863511334617232829"
+        },
+        {
+          "file": "libs/angular-auth/tsconfig.lib.prod.json",
+          "hash": "8483055944324028469"
+        },
+        {
+          "file": "libs/angular-auth/tsconfig.spec.json",
+          "hash": "1017824945828024882"
+        }
+      ],
+      "angular-utils": [
+        {
+          "file": "libs/angular-utils/.eslintrc.json",
+          "hash": "10737387972512268751"
+        },
+        {
+          "file": "libs/angular-utils/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/angular-utils/README.md",
+          "hash": "8333740353878713728"
+        },
+        {
+          "file": "libs/angular-utils/assets/i18n/de.json",
+          "hash": "16660797172411593590"
+        },
+        {
+          "file": "libs/angular-utils/assets/i18n/en.json",
+          "hash": "11640944360180179074"
+        },
+        {
+          "file": "libs/angular-utils/jest.config.ts",
+          "hash": "8906469118396315891"
+        },
+        {
+          "file": "libs/angular-utils/migrations.json",
+          "hash": "16194790673425841996"
+        },
+        {
+          "file": "libs/angular-utils/migrations/index.ts",
+          "hash": "2329532431365330315"
+        },
+        {
+          "file": "libs/angular-utils/migrations/jest.config.ts",
+          "hash": "18377103205360963362"
+        },
+        {
+          "file": "libs/angular-utils/migrations/test-utils/test-setup.ts",
+          "hash": "11861287047896255357",
+          "deps": [
+            "npm:@jest/globals",
+            "npm:jest-extended"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/tsconfig.json",
+          "hash": "17195777217452910567"
+        },
+        {
+          "file": "libs/angular-utils/migrations/tsconfig.migrations.json",
+          "hash": "9963808692098194954"
+        },
+        {
+          "file": "libs/angular-utils/migrations/tsconfig.spec.json",
+          "hash": "1715357266496609776"
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/add-import-meta-to-webpack-config.spec.ts",
+          "hash": "13268536982921159549",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/add-import-meta-to-webpack-config.ts",
+          "hash": "499067041921994618",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/replace-translation-path-factories.spec.ts",
+          "hash": "16269732416831694501",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/replace-translation-path-factories.ts",
+          "hash": "16081535499432602826",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/utils/extract-translation-path.ts",
+          "hash": "9139998527445428114",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/utils/update-translation-path-imports.ts",
+          "hash": "8450328276326781827",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/migrations/v6/utils/update-translation-path-provider.ts",
+          "hash": "14641858007531106705",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/ng-package.json",
+          "hash": "6488073908760932203"
+        },
+        {
+          "file": "libs/angular-utils/package.json",
+          "hash": "12233970841762164681",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "npm:@ngx-translate/http-loader",
+            "accelerator",
+            "angular-integration-interface",
+            "npm:@primeng/themes",
+            "npm:rxjs",
+            "npm:primeng",
+            "npm:@primeuix/styled",
+            "npm:@angular/platform-browser",
+            "npm:@nx/devkit",
+            "nx-migration-utils",
+            "integration-interface",
+            "npm:@jest/globals",
+            "npm:jest-extended",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/project.json",
+          "hash": "15644221522502608379"
+        },
+        {
+          "file": "libs/angular-utils/sonar-project.properties",
+          "hash": "12866841676195826643"
+        },
+        {
+          "file": "libs/angular-utils/src/index.ts",
+          "hash": "6128281659945959760"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/components/portal-page/portal-page.component.html",
+          "hash": "8740335406430693362"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/components/portal-page/portal-page.component.scss",
+          "hash": "13334652063412536736"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/components/portal-page/portal-page.component.spec.ts",
+          "hash": "9155102764526724708",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:ngx-translate-testing",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/components/portal-page/portal-page.component.ts",
+          "hash": "15251055967877528288",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "npm:rxjs",
+            "npm:@angular/common",
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/model/injection-tokens.ts",
+          "hash": "18016929594483159582",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/model/remote-component-config.model.ts",
+          "hash": "14719067544297719720"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/providers/angular-utils.providers.ts",
+          "hash": "11759965172914220745",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/providers/permission-service.providers.ts",
+          "hash": "16882626845617393268",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/providers/translation-path-from-meta.provider.spec.ts",
+          "hash": "7469298558625980615",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/providers/translation-path-from-meta.providers.ts",
+          "hash": "8618236922174300564",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/providers/translation-path.providers.ts",
+          "hash": "11108121246712225100",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/custom-use-style.service.spec.ts",
+          "hash": "13759104233278451206",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/custom-use-style.service.ts",
+          "hash": "379104447107167511",
+          "deps": [
+            "npm:@angular/core",
+            "npm:primeng",
+            "angular-integration-interface",
+            "npm:rxjs",
+            "npm:@primeuix/styled"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/permission.service.spec.ts",
+          "hash": "7840494444264950934",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/permission.service.ts",
+          "hash": "7661788738178275889",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/theme-config.service.spec.ts",
+          "hash": "9346569206078038978",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "accelerator",
+            "npm:primeng",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/theme-config.service.ts",
+          "hash": "13094955465199410116",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "integration-interface",
+            "npm:primeng",
+            "npm:@primeuix/styled"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/translation-cache.service.spec.ts",
+          "hash": "13583223566348957680",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/translation-cache.service.ts",
+          "hash": "13490270686133322526",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/translation-connection.service.spec.ts",
+          "hash": "6030056234566267630",
+          "deps": [
+            "npm:@angular/core",
+            "npm:ngx-translate-testing",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/services/translation-connection.service.ts",
+          "hash": "17840351710191939801",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/application-config.ts",
+          "hash": "4866388822425693535",
+          "deps": [
+            "npm:@angular/platform-browser",
+            "npm:primeng",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/autocomplete.ts",
+          "hash": "3250699738527157123"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/breadcrumb.ts",
+          "hash": "11520794994732317843"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/button.ts",
+          "hash": "2741316942944629062"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/datatable.ts",
+          "hash": "6231694735588829428"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/dialog.ts",
+          "hash": "15796360858903818983"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/fieldset.ts",
+          "hash": "2697849604090099630"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/fileupload.ts",
+          "hash": "15656459855995539164"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/floatlabel.ts",
+          "hash": "8693363057749334741"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/inputtext.ts",
+          "hash": "16360698485227056120"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/component-presets/paginator.ts",
+          "hash": "9668753620134491943"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/custom-preset.ts",
+          "hash": "13590878689650774526",
+          "deps": [
+            "npm:@primeng/themes"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/default-theme-variables.ts",
+          "hash": "5693737944781213532"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/preset/preset-variables.ts",
+          "hash": "774030774550397641"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/theme-config.spec.ts",
+          "hash": "15004949013539972558",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/theme/theme-config.ts",
+          "hash": "6958822956539265070"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/async-translate-loader.utils.spec.ts",
+          "hash": "8385226711420073956",
+          "deps": [
+            "npm:@ngx-translate/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/async-translate-loader.utils.ts",
+          "hash": "6133528113956850527",
+          "deps": [
+            "npm:@ngx-translate/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/caching-translate-loader.utils.spec.ts",
+          "hash": "1291764677339903344",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/caching-translate-loader.utils.ts",
+          "hash": "8558155096911018144",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@ngx-translate/core",
+            "npm:@ngx-translate/http-loader",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/create-color-palette.spec.ts",
+          "hash": "2204741343355104773"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/create-color-palette.ts",
+          "hash": "16213300613009197642"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/create-translate-loader.utils.spec.ts",
+          "hash": "5616945314153302514",
+          "deps": [
+            "npm:@angular/core",
+            "npm:ng-mocks",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/create-translate-loader.utils.ts",
+          "hash": "6807046898663344002",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/deep-merge.utils.ts",
+          "hash": "15952087433166594579"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/dynamic-locale-id.utils.spec.ts",
+          "hash": "3738086090418329644",
+          "deps": [
+            "angular-integration-interface",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/dynamic-locale-id.utils.ts",
+          "hash": "368074560883830334",
+          "deps": [
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/has-permission-checker-factory.spec.ts",
+          "hash": "5216847636214370572",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/has-permission-checker-factory.ts",
+          "hash": "10035624557711819905",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/has-permission-checker.ts",
+          "hash": "2340355000570204669",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/multi-language-missing-translation-handler.utils.spec.ts",
+          "hash": "10467845044862037753",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "npm:@ngx-translate/core",
+            "npm:rxjs",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/multi-language-missing-translation-handler.utils.ts",
+          "hash": "16480279109276891961",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "accelerator",
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/normalize-preset-keys.utils.spec.ts",
+          "hash": "10356388839556629266"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/normalize-preset-keys.utils.ts",
+          "hash": "1294226724580620965"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/portal-api-configuration.utils.ts",
+          "hash": "15092154923109359249",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/provide-connection-service.ts",
+          "hash": "15731144879169400430",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/remote-component-translation-path-factory.utils.ts",
+          "hash": "7526753977307496912",
+          "deps": [
+            "npm:rxjs",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/scope.utils.ts",
+          "hash": "17545207003664075192",
+          "deps": [
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/styles/app-styles-initializer.ts",
+          "hash": "16650533889330456379",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/styles/index.ts",
+          "hash": "8326849370920841862"
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/styles/mfe-styles.utils.ts",
+          "hash": "10308738456653012377",
+          "deps": [
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/styles/rc-styles.utils.ts",
+          "hash": "17832838404214954222",
+          "deps": [
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/styles/styles.utils.ts",
+          "hash": "17073664613341212033",
+          "deps": [
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/translate.combined.loader.ts",
+          "hash": "11958036141099188233",
+          "deps": [
+            "npm:@ngx-translate/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/lib/utils/translation-path-factory.utils.ts",
+          "hash": "6215610317594566874",
+          "deps": [
+            "npm:rxjs",
+            "angular-integration-interface",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-utils/tsconfig.json",
+          "hash": "13435514026187882015"
+        },
+        {
+          "file": "libs/angular-utils/tsconfig.lib.json",
+          "hash": "14200934095081983345"
+        },
+        {
+          "file": "libs/angular-utils/tsconfig.lib.prod.json",
+          "hash": "15349319459182570289"
+        },
+        {
+          "file": "libs/angular-utils/tsconfig.spec.json",
+          "hash": "12501240747465492615"
+        }
+      ],
+      "shell-core": [
+        {
+          "file": "libs/shell-core/.eslintrc.json",
+          "hash": "6340354763054970991"
+        },
+        {
+          "file": "libs/shell-core/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/shell-core/README.md",
+          "hash": "16850655751688567574"
+        },
+        {
+          "file": "libs/shell-core/assets/i18n/de.json",
+          "hash": "15390867170973694837"
+        },
+        {
+          "file": "libs/shell-core/assets/i18n/en.json",
+          "hash": "1173163108283919358"
+        },
+        {
+          "file": "libs/shell-core/assets/styles.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shell-core/jest.config.ts",
+          "hash": "16005632361080239970"
+        },
+        {
+          "file": "libs/shell-core/migrations.json",
+          "hash": "5281957417375190776"
+        },
+        {
+          "file": "libs/shell-core/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/shell-core/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/shell-core/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/shell-core/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/shell-core/ng-package.json",
+          "hash": "7622769044825682086"
+        },
+        {
+          "file": "libs/shell-core/package.json",
+          "hash": "9624141725869380642",
+          "deps": [
+            "npm:rxjs",
+            "npm:@angular/animations",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@ngneat/until-destroy",
+            "angular-accelerator",
+            "angular-integration-interface",
+            "angular-utils",
+            "angular-remote-components",
+            "npm:@ngx-translate/core",
+            "npm:primeng",
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/shell-core/project.json",
+          "hash": "14242509674510473257"
+        },
+        {
+          "file": "libs/shell-core/sonar-project.properties",
+          "hash": "4468613418756280599"
+        },
+        {
+          "file": "libs/shell-core/src/index.ts",
+          "hash": "571678481911883062"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/app-loading-spinner/app-loading-spinner.component.html",
+          "hash": "2746389655432776493"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/app-loading-spinner/app-loading-spinner.component.scss",
+          "hash": "11198522096604922388"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/app-loading-spinner/app-loading-spinner.component.ts",
+          "hash": "14925697362507667959",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/error-component/global-error.component.html",
+          "hash": "17571052062379227014"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/error-component/global-error.component.scss",
+          "hash": "11283409237087844916"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/error-component/global-error.component.ts",
+          "hash": "15289001930518656207",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/portal-header/header.component.html",
+          "hash": "11401645183070547891"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/portal-header/header.component.scss",
+          "hash": "8212663361528729816"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/portal-header/header.component.ts",
+          "hash": "2764462837978590904",
+          "deps": [
+            "npm:@angular/animations",
+            "npm:@angular/core",
+            "npm:@ngneat/until-destroy",
+            "npm:rxjs",
+            "angular-remote-components",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/portal-viewport/portal-viewport.component.html",
+          "hash": "795017658929499427"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/portal-viewport/portal-viewport.component.scss",
+          "hash": "7951786144640674183"
+        },
+        {
+          "file": "libs/shell-core/src/lib/components/portal-viewport/portal-viewport.component.ts",
+          "hash": "4173380507987671459",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@ngneat/until-destroy",
+            "angular-integration-interface",
+            "npm:primeng",
+            "npm:rxjs",
+            "angular-remote-components"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/directives/src.directive.ts",
+          "hash": "16810164128167095990",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/model/constants.ts",
+          "hash": "7791444399878458213"
+        },
+        {
+          "file": "libs/shell-core/src/lib/services/permissions-cache.service.ts",
+          "hash": "6151371021093727099",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/shell-core.module.ts",
+          "hash": "10021715752526981964",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "angular-remote-components",
+            "npm:primeng",
+            "npm:@ngx-translate/core",
+            "angular-utils",
+            "angular-accelerator"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/shell-interface/show-content-provider.ts",
+          "hash": "5719745802923670274",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/lib/shell-interface/workspace-config-bff-service-provider.ts",
+          "hash": "1424718389036861758",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shell-core/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/shell-core/tsconfig.json",
+          "hash": "7184861466157324158"
+        },
+        {
+          "file": "libs/shell-core/tsconfig.lib.json",
+          "hash": "14200934095081983345"
+        },
+        {
+          "file": "libs/shell-core/tsconfig.lib.prod.json",
+          "hash": "17572522884110414592"
+        },
+        {
+          "file": "libs/shell-core/tsconfig.spec.json",
+          "hash": "15931221680254998227"
+        }
+      ],
+      "accelerator": [
+        {
+          "file": "libs/accelerator/.eslintrc.json",
+          "hash": "16402751898759826414"
+        },
+        {
+          "file": "libs/accelerator/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/accelerator/README.md",
+          "hash": "3156703330636493332"
+        },
+        {
+          "file": "libs/accelerator/jest.config.ts",
+          "hash": "16631030633716422882"
+        },
+        {
+          "file": "libs/accelerator/migrations.json",
+          "hash": "9460101901355950963"
+        },
+        {
+          "file": "libs/accelerator/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/accelerator/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/accelerator/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/accelerator/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/accelerator/package.json",
+          "hash": "457284560210996819",
+          "deps": [
+            "npm:tslib",
+            "npm:rxjs",
+            "npm:@nx/devkit",
+            "npm:@nx/module-federation",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/accelerator/project.json",
+          "hash": "7825811406253889696"
+        },
+        {
+          "file": "libs/accelerator/sonar-project.properties",
+          "hash": "485305374724901818"
+        },
+        {
+          "file": "libs/accelerator/src/index.ts",
+          "hash": "8840403901014966351"
+        },
+        {
+          "file": "libs/accelerator/src/lib/declarations.ts",
+          "hash": "12602490273677685915"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/message.ts",
+          "hash": "11501594059233032767"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/mocks/broadcast-channel.mock.ts",
+          "hash": "16185674168040039145"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/mocks/fake-topic.ts",
+          "hash": "1452624474737489202",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/syncable-topic.spec.ts",
+          "hash": "14639842533300045622"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/syncable-topic.ts",
+          "hash": "12491401127041448302"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/topic-data-message.ts",
+          "hash": "1773062691775974210"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/topic-message-type.ts",
+          "hash": "2295894281325581615"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/topic-message.ts",
+          "hash": "13695153663842639221"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/topic-publisher.ts",
+          "hash": "2942686500063592820"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/topic-resolve-message.ts",
+          "hash": "8281438640695563067"
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/topic.spec.ts",
+          "hash": "4138685411931670620",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/accelerator/src/lib/topic/topic.ts",
+          "hash": "4056609065392164644",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/date.utils.ts",
+          "hash": "9119511779762302845"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/ensure-property.utils.spec.ts",
+          "hash": "13553353753571089600"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/ensure-property.utils.ts",
+          "hash": "3998105284197082286"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/get-normalized-browser-locales.utils.spec.ts",
+          "hash": "3660997734885389311"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/get-normalized-browser-locales.utils.ts",
+          "hash": "9639727345259140411"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/get-onecx-shared-recommendations.ts",
+          "hash": "6886594001750077554",
+          "deps": [
+            "npm:@nx/module-federation"
+          ]
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/is-test.utils.ts",
+          "hash": "9062956587968861842"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/logs.utils.ts",
+          "hash": "9182181316223096942"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/normalize-locales.utils.spec.ts",
+          "hash": "16603110810261886307"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/normalize-locales.utils.ts",
+          "hash": "8451225213569940918"
+        },
+        {
+          "file": "libs/accelerator/src/lib/utils/path.utils.ts",
+          "hash": "9320383093281454158"
+        },
+        {
+          "file": "libs/accelerator/tsconfig.json",
+          "hash": "10294729341131714718"
+        },
+        {
+          "file": "libs/accelerator/tsconfig.lib.json",
+          "hash": "17512648156706774563"
+        },
+        {
+          "file": "libs/accelerator/tsconfig.spec.json",
+          "hash": "12478527556459153090"
+        }
+      ],
+      "angular-remote-components": [
+        {
+          "file": "libs/angular-remote-components/.eslintrc.json",
+          "hash": "8179277098788767860"
+        },
+        {
+          "file": "libs/angular-remote-components/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/angular-remote-components/README.md",
+          "hash": "18009881796231897526"
+        },
+        {
+          "file": "libs/angular-remote-components/jest.config.ts",
+          "hash": "17388573916489514692"
+        },
+        {
+          "file": "libs/angular-remote-components/migrations.json",
+          "hash": "5281957417375190776"
+        },
+        {
+          "file": "libs/angular-remote-components/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/angular-remote-components/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/angular-remote-components/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/angular-remote-components/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/mocks/index.ts",
+          "hash": "18154999750420847211"
+        },
+        {
+          "file": "libs/angular-remote-components/mocks/ng-package.json",
+          "hash": "1614976807115804227"
+        },
+        {
+          "file": "libs/angular-remote-components/mocks/slot-service-mock.ts",
+          "hash": "10802372088816323600",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/ng-package.json",
+          "hash": "17070886214438562117"
+        },
+        {
+          "file": "libs/angular-remote-components/package.json",
+          "hash": "3444891905526461159",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "integration-interface",
+            "angular-utils",
+            "npm:@angular-architects/module-federation",
+            "npm:rxjs",
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/project.json",
+          "hash": "10012024575101441888"
+        },
+        {
+          "file": "libs/angular-remote-components/sonar-project.properties",
+          "hash": "2101155700099959794"
+        },
+        {
+          "file": "libs/angular-remote-components/src/index.ts",
+          "hash": "4257622532284451136",
+          "deps": [
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/angular-remote-components.module.ts",
+          "hash": "14275170003623639125",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/components/slot/slot.component.html",
+          "hash": "6765258602951438903"
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/components/slot/slot.component.ts",
+          "hash": "473913400506887917",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs",
+            "angular-utils",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/model/remote-component.ts",
+          "hash": "11758041115335331152",
+          "deps": [
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/model/remote-webcomponent.ts",
+          "hash": "3040144174619735437",
+          "deps": [
+            "angular-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/services/permission.service.ts",
+          "hash": "6385914155366301776",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/services/slot.service.ts",
+          "hash": "3231047807119732913",
+          "deps": [
+            "npm:@angular-architects/module-federation",
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/lib/utils/provide-translate-service-for-root.utils.ts",
+          "hash": "17270320696668191783",
+          "deps": [
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/src/test-setup.ts",
+          "hash": "8678348892760176968",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-remote-components/tsconfig.json",
+          "hash": "1074750476616482822"
+        },
+        {
+          "file": "libs/angular-remote-components/tsconfig.lib.json",
+          "hash": "15812632591864527029"
+        },
+        {
+          "file": "libs/angular-remote-components/tsconfig.lib.prod.json",
+          "hash": "15349319459182570289"
+        },
+        {
+          "file": "libs/angular-remote-components/tsconfig.spec.json",
+          "hash": "551998798317460917"
+        }
+      ],
+      "nx-migration-utils": [
+        {
+          "file": "libs/nx-migration-utils/.eslintrc.json",
+          "hash": "12429351963966234045"
+        },
+        {
+          "file": "libs/nx-migration-utils/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/nx-migration-utils/README.md",
+          "hash": "15428073366222814570"
+        },
+        {
+          "file": "libs/nx-migration-utils/jest.config.ts",
+          "hash": "14551735718321562471"
+        },
+        {
+          "file": "libs/nx-migration-utils/package.json",
+          "hash": "12702967811540838858",
+          "deps": [
+            "npm:node-html-parser",
+            "npm:tslib",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:@nx/devkit",
+            "npm:typescript",
+            "npm:postcss",
+            "npm:postcss-scss"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/project.json",
+          "hash": "693083700942867085"
+        },
+        {
+          "file": "libs/nx-migration-utils/sonar-project.properties",
+          "hash": "9217209081426668518"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/index.ts",
+          "hash": "3154216261194154879"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/html-templates.utils.ts",
+          "hash": "8401420746833493877",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/index.ts",
+          "hash": "10252388556928223997"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/model/matching-module.model.ts",
+          "hash": "13448949583645694611"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/model/module.model.ts",
+          "hash": "7324949332465206460"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/model/provider.model.ts",
+          "hash": "174892748821362974"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/parameters.utils.ts",
+          "hash": "17235969897137334029",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/replacement-in-files.utils.ts",
+          "hash": "6020006920578527866",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/detection/detect-modules-importing-module.utils.ts",
+          "hash": "12108201372498730518",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/detection/detect-variables-with-module.utils.ts",
+          "hash": "8733140558453958234",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/detection/detect-variables-with-provider.utils.ts",
+          "hash": "808989184845933471",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/modification/add-provider-import-if-does-not-exist.utils.ts",
+          "hash": "17370179340147067206",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/modification/add-provider-import-in-file.utils.ts",
+          "hash": "8716521810115852455"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/modification/add-provider-in-module-if-does-not-exist.utils.ts",
+          "hash": "17510160107208001628",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/modification/add-provider-in-module.utils.ts",
+          "hash": "7579353164651474540",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/patterns.utils.ts",
+          "hash": "11592260217820519477"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/validation/is-provider-import-in-file.utils.ts",
+          "hash": "11132068446223960009",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/angular/utils/validation/is-provider-in-module.utils.ts",
+          "hash": "14137867152541234331",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/common-migrations/common-migrate-onecx-to-v6.utils.ts",
+          "hash": "18332282817745837626",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/jest.config.ts",
+          "hash": "17470925932863289615"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/tsconfig.json",
+          "hash": "12454069033532461551"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/tsconfig.migrations.json",
+          "hash": "9963808692098194954"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/tsconfig.spec.json",
+          "hash": "10097673859831427128"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/v6/remove-pia-imports.spec.ts",
+          "hash": "14359428691009531925",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/v6/remove-pia-imports.ts",
+          "hash": "6094915350457099502",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/v6/replace-pia-imports.spec.ts",
+          "hash": "2830957076211407713",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/v6/replace-pia-imports.ts",
+          "hash": "2055151205441059611",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/v6/replace-portal-core-module.spec.ts",
+          "hash": "17324293876191775298",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/migrations/v6/replace-portal-core-module.ts",
+          "hash": "16690690795245968231",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/detect-method-calls-in-files.ts",
+          "hash": "5084615424441134439",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/detect-method-calls-in-files.utils.ts",
+          "hash": "4332190144136996853",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/detection/detect-variables-with-identifier.utils.ts",
+          "hash": "9372425409536860560",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/import-statements.utils.ts",
+          "hash": "11836077144857090412",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/add-new-import.utils.ts",
+          "hash": "7781771115100828047"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/add-to-first-import.utils.ts",
+          "hash": "9840024588286567235",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/remove-import-specifier.utils.spec.ts",
+          "hash": "14453150740420084534",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/remove-import-specifier.utils.ts",
+          "hash": "967158141482566788",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/remove-json-references.utils.ts",
+          "hash": "16536920047580604698"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/replace-tag-in-html.utils.ts",
+          "hash": "8444534293032683339",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:node-html-parser"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/update-json-files.utils.ts",
+          "hash": "17856008741806354364",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/update-style-sheet.utils.spec.ts",
+          "hash": "16469946401490301138",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/update-style-sheet.utils.ts",
+          "hash": "8580544055485697370",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:postcss",
+            "npm:postcss-scss"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/modification/update-style-sheets.utils.ts",
+          "hash": "11015056247502315779",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:postcss"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/patterns.utils.ts",
+          "hash": "12229925316506278000"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/print-warnings.ts",
+          "hash": "11469307009130665605",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/print-warnings.utils.ts",
+          "hash": "16723137607583808523",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/typescript-files.utils.ts",
+          "hash": "15431488984199357629",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/update-gitignore.utils.ts",
+          "hash": "8565787707650152881",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/validation/has-html-tag.utils.ts",
+          "hash": "15203331145059559174",
+          "deps": [
+            "npm:@nx/devkit",
+            "npm:node-html-parser"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/validation/is-file-style-sheet.utils.ts",
+          "hash": "8793076114344968671"
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/validation/is-import-in-content.utils.ts",
+          "hash": "12014370350298265751",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/validation/is-import-in-file-content.utils.ts",
+          "hash": "17423021156092788962",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/lib/utils/validation/is-namespace-import-in-content.utils.ts",
+          "hash": "11605666057503295729",
+          "deps": [
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/src/test-setup.ts",
+          "hash": "11861287047896255357",
+          "deps": [
+            "npm:@jest/globals",
+            "npm:jest-extended"
+          ]
+        },
+        {
+          "file": "libs/nx-migration-utils/tsconfig.json",
+          "hash": "10294729341131714718"
+        },
+        {
+          "file": "libs/nx-migration-utils/tsconfig.lib.json",
+          "hash": "17512648156706774563"
+        },
+        {
+          "file": "libs/nx-migration-utils/tsconfig.spec.json",
+          "hash": "9169325171020047781"
+        }
+      ],
+      "angular-integration-interface": [
+        {
+          "file": "libs/angular-integration-interface/.eslintrc.json",
+          "hash": "15701163267843911051"
+        },
+        {
+          "file": "libs/angular-integration-interface/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/angular-integration-interface/README.md",
+          "hash": "438200375955710196"
+        },
+        {
+          "file": "libs/angular-integration-interface/jest.config.ts",
+          "hash": "4388613791712238437"
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations.json",
+          "hash": "10818456467670916757"
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/index.ts",
+          "hash": "5834029591921627306"
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/jest.config.ts",
+          "hash": "4973083849778210376"
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/test-utils/test-setup.ts",
+          "hash": "11861287047896255357",
+          "deps": [
+            "npm:@jest/globals",
+            "npm:jest-extended"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/tsconfig.json",
+          "hash": "17195777217452910567"
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/tsconfig.migrations.json",
+          "hash": "9963808692098194954"
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/tsconfig.spec.json",
+          "hash": "1715357266496609776"
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/remove-add-initialize-module-guard.ts",
+          "hash": "13151349754571680903",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/remove-auth-service.spec.ts",
+          "hash": "10319812230499002110",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/remove-auth-service.ts",
+          "hash": "1322532420375313958",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/replace-provide-app-service-mock.spec.ts",
+          "hash": "239455044896002844",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/replace-provide-app-service-mock.ts",
+          "hash": "14184181886191238397",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/utils/remove-and-track-import.ts",
+          "hash": "11592166967692383949",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/warn-removed-properties-from-theme-service.spec.ts",
+          "hash": "4121491856716229400",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/migrations/v6/warn-removed-properties-from-theme-service.ts",
+          "hash": "14071372986348525796",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/app-config-service-mock.ts",
+          "hash": "5822418536781291964",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/app-state-service-mock.ts",
+          "hash": "13406936822692922707",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/configuration-service-mock.ts",
+          "hash": "6657786110810395087",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/index.ts",
+          "hash": "2821288593972546605",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/ng-package.json",
+          "hash": "1614976807115804227"
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/portal-message-service-mock.ts",
+          "hash": "12873805378991258291",
+          "deps": [
+            "npm:@angular/core",
+            "accelerator",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/remote-components-service-mock.ts",
+          "hash": "6183684041653369065",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/shell-capability-service-mock.ts",
+          "hash": "11419132615128833371",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/mocks/user-service-mock.ts",
+          "hash": "10219822778833184688",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/ng-package.json",
+          "hash": "13376483799520325576"
+        },
+        {
+          "file": "libs/angular-integration-interface/package.json",
+          "hash": "1354291697665121911",
+          "deps": [
+            "npm:@angular/core",
+            "accelerator",
+            "nx-migration-utils",
+            "integration-interface",
+            "npm:rxjs",
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:ts-semaphore",
+            "npm:@jest/globals",
+            "npm:jest-extended",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/project.json",
+          "hash": "8137278127500137012"
+        },
+        {
+          "file": "libs/angular-integration-interface/sonar-project.properties",
+          "hash": "10018802618471190493"
+        },
+        {
+          "file": "libs/angular-integration-interface/src/index.ts",
+          "hash": "7755664311293193985",
+          "deps": [
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/api/constants.ts",
+          "hash": "6072488465297367891"
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/api/injection-tokens.ts",
+          "hash": "3897360545664143930",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/model/config-key.model.ts",
+          "hash": "10060841726520138885"
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/app-config-service.ts",
+          "hash": "17090279346792298916",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/app-state.service.ts",
+          "hash": "3926971362817961398",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/configuration.service.spec.ts",
+          "hash": "17986747749391448344",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "accelerator",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/configuration.service.ts",
+          "hash": "11497766769345526252",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs",
+            "integration-interface",
+            "npm:ts-semaphore"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/icon.service.spec.ts",
+          "hash": "16607557382576215033",
+          "deps": [
+            "npm:@angular/core",
+            "accelerator",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/icon.service.ts",
+          "hash": "13831515998893257324",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/image-repository.service.spec.ts",
+          "hash": "136957392559159585",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/image-repository.service.ts",
+          "hash": "1204179624857437919",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/parameters.service.spec.ts",
+          "hash": "16901200208644787673",
+          "deps": [
+            "integration-interface",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/parameters.service.ts",
+          "hash": "11063175862911279671",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/portal-message.service.spec.ts",
+          "hash": "8932748822677732506",
+          "deps": [
+            "npm:@angular/core",
+            "npm:ngx-translate-testing",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/portal-message.service.ts",
+          "hash": "7780817619500774760",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngx-translate/core",
+            "integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/remote-components.service.ts",
+          "hash": "6229772893973671465",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/shell-capability.service.ts",
+          "hash": "7186530424621964954",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/theme.service.ts",
+          "hash": "12133594171888690726",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/user.service.spec.ts",
+          "hash": "12953277574007858305",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/user.service.ts",
+          "hash": "2668014265007462531",
+          "deps": [
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/workspace.service.spec.ts",
+          "hash": "5048220796814313931",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/lib/services/workspace.service.ts",
+          "hash": "16712535129260525016",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/src/test-setup.ts",
+          "hash": "8678348892760176968",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-integration-interface/tsconfig.json",
+          "hash": "1074750476616482822"
+        },
+        {
+          "file": "libs/angular-integration-interface/tsconfig.lib.json",
+          "hash": "5825349357211581526"
+        },
+        {
+          "file": "libs/angular-integration-interface/tsconfig.lib.prod.json",
+          "hash": "15349319459182570289"
+        },
+        {
+          "file": "libs/angular-integration-interface/tsconfig.spec.json",
+          "hash": "7740318614289064751"
+        }
+      ],
+      "ngrx-integration-interface": [
+        {
+          "file": "libs/ngrx-integration-interface/.eslintrc.json",
+          "hash": "15433552374970842249"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/README.md",
+          "hash": "2581437015513611657"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/jest.config.ts",
+          "hash": "13363929236896520575"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/ng-package.json",
+          "hash": "3922800604898063901"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/package.json",
+          "hash": "11930065216584829376",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "angular-integration-interface",
+            "integration-interface",
+            "npm:@ngneat/until-destroy",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/project.json",
+          "hash": "6835966458693524473"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/sonar-project.properties",
+          "hash": "4221311031927547345"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/index.ts",
+          "hash": "14934124821322475473"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/onecx-actions.ts",
+          "hash": "15122207025767432290",
+          "deps": [
+            "npm:@ngrx/store",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/onecx-reducer.ts",
+          "hash": "17714474664253887018",
+          "deps": [
+            "npm:@ngrx/store",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/onecx-selectors.ts",
+          "hash": "3193143832660174642",
+          "deps": [
+            "npm:@ngrx/store",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/onecx-state.ts",
+          "hash": "5182902635529739058",
+          "deps": [
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/app-config-store-connector-service.spec.ts",
+          "hash": "2619164341969559902",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/app-config-store-connector-service.ts",
+          "hash": "11203567361411996987",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "angular-integration-interface",
+            "npm:@ngneat/until-destroy"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/configuration-store-connector-service.spec.ts",
+          "hash": "12942431027189266263",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/configuration-store-connector-service.ts",
+          "hash": "7284454594850519691",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngneat/until-destroy",
+            "npm:@ngrx/store",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-mfe-store-connector-service.spec.ts",
+          "hash": "13813450402909596553",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-mfe-store-connector-service.ts",
+          "hash": "15059300910987547946",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "npm:@ngneat/until-destroy",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-page-store-connector-service.spec.ts",
+          "hash": "5203946536146168666",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-page-store-connector-service.ts",
+          "hash": "5759350619485082191",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "npm:@ngneat/until-destroy",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-theme-store-connector-service.spec.ts",
+          "hash": "18284391275708121947",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-theme-store-connector-service.ts",
+          "hash": "110938094444045609",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "npm:@ngneat/until-destroy"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-workspace-store-connector-service.spec.ts",
+          "hash": "18033752051658204029",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/current-workspace-store-connector-service.ts",
+          "hash": "2667863669545580550",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "npm:@ngneat/until-destroy",
+            "integration-interface",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/index.ts",
+          "hash": "662543304528736486"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/navigated-event-store-connector-service.spec.ts",
+          "hash": "15991390105168561537",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "angular-integration-interface",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/navigated-event-store-connector-service.ts",
+          "hash": "7227717301103985037",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "npm:rxjs",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/permissions-store-connector-service.spec.ts",
+          "hash": "921486268927280535",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/lib/store-connector/store-connectors/permissions-store-connector-service.ts",
+          "hash": "7763682866763736520",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "npm:@ngneat/until-destroy",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/ngrx-integration-interface/tsconfig.json",
+          "hash": "4635761979972111601"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/tsconfig.lib.json",
+          "hash": "10336277431454082480"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/tsconfig.lib.prod.json",
+          "hash": "17572522884110414592"
+        },
+        {
+          "file": "libs/ngrx-integration-interface/tsconfig.spec.json",
+          "hash": "15931221680254998227"
+        }
+      ],
+      "integration-interface": [
+        {
+          "file": "libs/integration-interface/.eslintrc.json",
+          "hash": "16402751898759826414"
+        },
+        {
+          "file": "libs/integration-interface/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/integration-interface/README.md",
+          "hash": "16045981788776207925"
+        },
+        {
+          "file": "libs/integration-interface/jest.config.ts",
+          "hash": "134427559512739128"
+        },
+        {
+          "file": "libs/integration-interface/migrations.json",
+          "hash": "3639161793203692168"
+        },
+        {
+          "file": "libs/integration-interface/migrations/index.ts",
+          "hash": "4624080243714212812"
+        },
+        {
+          "file": "libs/integration-interface/migrations/tsconfig.json",
+          "hash": "12145591678979606785"
+        },
+        {
+          "file": "libs/integration-interface/migrations/tsconfig.migrations.json",
+          "hash": "4334754729301540627"
+        },
+        {
+          "file": "libs/integration-interface/migrations/v5/warn-for-events-publisher-navigated.ts",
+          "hash": "10455964044335040237",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/migrations/v5/warn-for-events-topic-navigated.ts",
+          "hash": "17589372016064046547",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils",
+            "npm:typescript",
+            "npm:@phenomnomnominal/tsquery"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/package.json",
+          "hash": "7870077632512276572",
+          "deps": [
+            "npm:tslib",
+            "npm:rxjs",
+            "accelerator",
+            "nx-migration-utils",
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/project.json",
+          "hash": "1395812638413483140"
+        },
+        {
+          "file": "libs/integration-interface/sonar-project.properties",
+          "hash": "17227781403983923244"
+        },
+        {
+          "file": "libs/integration-interface/src/index.ts",
+          "hash": "15674946049408047947"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/declarations.ts",
+          "hash": "11059307439789335176"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/services/icon.service.spec.ts",
+          "hash": "4771626777092285489",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/services/icon.service.ts",
+          "hash": "10832291006840713659",
+          "deps": [
+            "npm:rxjs",
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/services/image-repository.service.spec.ts",
+          "hash": "16486882520203594352",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/services/image-repository.service.ts",
+          "hash": "1645001933026354875",
+          "deps": [
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/configuration/v1/configuration.topic.ts",
+          "hash": "4024869415168918339",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-location/v1/current-location.model.ts",
+          "hash": "14028355980069376686"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-location/v1/current-location.topic.ts",
+          "hash": "717802669252171210",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-mfe/v1/current-mfe.topic.ts",
+          "hash": "7569641574836544438",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-mfe/v1/mfe-info.model.ts",
+          "hash": "10589664568216703445"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-page/v1/current-page.spec.ts",
+          "hash": "17226212748229178393"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-page/v1/current-page.topic.ts",
+          "hash": "4555852730629809644",
+          "deps": [
+            "accelerator",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-page/v1/page-info.model.ts",
+          "hash": "8336069774976066201"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-theme/v1/current-theme.spec.ts",
+          "hash": "10074634011420912758"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-theme/v1/current-theme.topic.ts",
+          "hash": "6386676982648861073",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-theme/v1/theme-override.model.ts",
+          "hash": "6586364403492754050"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-theme/v1/theme-override.spec.ts",
+          "hash": "3218534499725762163"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-theme/v1/theme.model.ts",
+          "hash": "7676582657395579158"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-workspace/v1/current-workspace.topic.ts",
+          "hash": "12653404104563287618",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-workspace/v1/endpoint.model.ts",
+          "hash": "5538462472830688842"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-workspace/v1/mfe-portal-registration.model.ts",
+          "hash": "15678156891471793919"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-workspace/v1/route.model.ts",
+          "hash": "1271969008942922650"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/current-workspace/v1/workspace.model.ts",
+          "hash": "8576004794819369409"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/events/v1/events-topic.ts",
+          "hash": "15052898988499805286",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/events/v1/navigated-event-payload.ts",
+          "hash": "3296957282324796407"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/events/v1/navigated-event-type.ts",
+          "hash": "5313927961095321584"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/events/v1/topic-event-type.ts",
+          "hash": "2726443345450570410"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/global-error/v1/global-error.topic.ts",
+          "hash": "8557292953364684041",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/global-loading/v1/global-loading.topic.ts",
+          "hash": "13673519056406025378",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/icons/v1/icon.model.ts",
+          "hash": "12252553815622225558"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/icons/v1/icon.topic.ts",
+          "hash": "6740228488241305798",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/image-repository/image-repository.model.ts",
+          "hash": "5127632701854927248"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/image-repository/image-repository.topic.ts",
+          "hash": "14183239023224323642",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/is-authenticated/v1/isAuthenticated.topic.ts",
+          "hash": "15779297140526252297",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/message/v1/message.model.ts",
+          "hash": "1129860254049963556"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/message/v1/message.topic.ts",
+          "hash": "4236943973384212497",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/parameters/v1/parameters.topic.ts",
+          "hash": "9999181681011610835",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/permissions-rpc/v1/permissions-rpc.model.ts",
+          "hash": "10696118564492041733"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/permissions-rpc/v1/permissions-rpc.topic.ts",
+          "hash": "1000965544876660935",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/permissions/v1/permissions.topic.ts",
+          "hash": "7041578586671102774",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/remote-components/v1/remote-component.model.ts",
+          "hash": "17267651951301841937"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/remote-components/v1/remote-components-info.model.ts",
+          "hash": "183971695201548799"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/remote-components/v1/remote-components.topic.ts",
+          "hash": "6400107396760088236",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/remote-components/v1/slot.model.ts",
+          "hash": "2174643744203563301"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/user-profile/v1/user-profile.model.ts",
+          "hash": "12282960875963598039"
+        },
+        {
+          "file": "libs/integration-interface/src/lib/topics/user-profile/v1/user-profile.topic.ts",
+          "hash": "3913506466606780109",
+          "deps": [
+            "accelerator"
+          ]
+        },
+        {
+          "file": "libs/integration-interface/tsconfig.json",
+          "hash": "10294729341131714718"
+        },
+        {
+          "file": "libs/integration-interface/tsconfig.lib.json",
+          "hash": "17512648156706774563"
+        },
+        {
+          "file": "libs/integration-interface/tsconfig.spec.json",
+          "hash": "12478527556459153090"
+        }
+      ],
+      "ngrx-accelerator": [
+        {
+          "file": "libs/ngrx-accelerator/.eslintrc.json",
+          "hash": "15433552374970842249"
+        },
+        {
+          "file": "libs/ngrx-accelerator/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/ngrx-accelerator/README.md",
+          "hash": "7208793646495679673"
+        },
+        {
+          "file": "libs/ngrx-accelerator/jest.config.ts",
+          "hash": "14200931528623642119"
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations.json",
+          "hash": "7213989353820117551"
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/index.ts",
+          "hash": "6799112979866806403"
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/jest.config.ts",
+          "hash": "6631988740787810700"
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/test-utils/test-setup.ts",
+          "hash": "11861287047896255357",
+          "deps": [
+            "npm:@jest/globals",
+            "npm:jest-extended"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/tsconfig.json",
+          "hash": "17195777217452910567"
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/tsconfig.migrations.json",
+          "hash": "9963808692098194954"
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/tsconfig.spec.json",
+          "hash": "9388903296914005008"
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/v6/replace-filter-query-params-functions.spec.ts",
+          "hash": "11892256321692821691",
+          "deps": [
+            "npm:@nx/devkit"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/migrations/v6/replace-filter-query-params-functions.ts",
+          "hash": "10369037890568334335",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/ng-package.json",
+          "hash": "15940540649702074312"
+        },
+        {
+          "file": "libs/ngrx-accelerator/package.json",
+          "hash": "12174771441504600325",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:deepmerge",
+            "npm:fast-deep-equal",
+            "npm:@jest/globals",
+            "npm:jest-extended",
+            "npm:@ngrx/effects",
+            "npm:@ngrx/operators",
+            "npm:@ngrx/router-store",
+            "npm:@ngrx/store",
+            "angular-integration-interface",
+            "integration-interface",
+            "npm:rxjs",
+            "npm:zod",
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/project.json",
+          "hash": "15122410008102093226"
+        },
+        {
+          "file": "libs/ngrx-accelerator/sonar-project.properties",
+          "hash": "3863731015164260830"
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/index.ts",
+          "hash": "2194107769885741077"
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/store-connector/navigated-event-store-connector-service.ts",
+          "hash": "8357338984561172647",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface",
+            "npm:rxjs",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/store-connector/onecx-actions.ts",
+          "hash": "4528956358045915587",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/store-connector/onecx-reducer.ts",
+          "hash": "3049538599290611069",
+          "deps": [
+            "npm:@ngrx/store",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/store-connector/onecx-selectors.ts",
+          "hash": "8367918274242642214",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/store-connector/onecx-state.ts",
+          "hash": "16605242915616671796",
+          "deps": [
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/store-connector/permissions-store-connector-service.ts",
+          "hash": "489833458893015014",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@ngrx/store",
+            "integration-interface"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/utils/effects/create-query-params-effect.ts",
+          "hash": "13583059239435417978",
+          "deps": [
+            "npm:@angular/router",
+            "npm:@ngrx/effects",
+            "npm:@ngrx/operators",
+            "npm:@ngrx/store",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/utils/effects/filter-for-navigated-to.ts",
+          "hash": "1077160706525038433",
+          "deps": [
+            "npm:rxjs",
+            "npm:@angular/router",
+            "npm:@angular/core",
+            "npm:@ngrx/router-store"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/utils/effects/filter-for-only-query-params-changed.ts",
+          "hash": "3324330695607300346",
+          "deps": [
+            "npm:@angular/router",
+            "npm:@ngrx/router-store",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/utils/effects/filter-for-query-params-changed.ts",
+          "hash": "15509878286678815258",
+          "deps": [
+            "npm:@ngrx/router-store",
+            "npm:zod",
+            "npm:rxjs",
+            "npm:fast-deep-equal",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/utils/local-storage/create-nested-key-configuration.ts",
+          "hash": "1742702051261268118"
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/utils/local-storage/lazy-loading-merge-reducer.ts",
+          "hash": "11607187031683757013",
+          "deps": [
+            "npm:deepmerge"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/lib/utils/selectors/create-child-selectors.ts",
+          "hash": "13337883022763749937",
+          "deps": [
+            "npm:@ngrx/store"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/ngrx-accelerator/tsconfig.json",
+          "hash": "4635761979972111601"
+        },
+        {
+          "file": "libs/ngrx-accelerator/tsconfig.lib.json",
+          "hash": "10336277431454082480"
+        },
+        {
+          "file": "libs/ngrx-accelerator/tsconfig.lib.prod.json",
+          "hash": "17572522884110414592"
+        },
+        {
+          "file": "libs/ngrx-accelerator/tsconfig.spec.json",
+          "hash": "15931221680254998227"
+        }
+      ],
+      "angular-standalone-shell": [
+        {
+          "file": "libs/angular-standalone-shell/.eslintrc.json",
+          "hash": "4166636190844306155"
+        },
+        {
+          "file": "libs/angular-standalone-shell/README.md",
+          "hash": "6601033733673465554"
+        },
+        {
+          "file": "libs/angular-standalone-shell/assets/styles.scss",
+          "hash": "538190150355779723"
+        },
+        {
+          "file": "libs/angular-standalone-shell/jest.config.ts",
+          "hash": "11870263465634700879"
+        },
+        {
+          "file": "libs/angular-standalone-shell/migrations.json",
+          "hash": "5281957417375190776"
+        },
+        {
+          "file": "libs/angular-standalone-shell/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/angular-standalone-shell/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/angular-standalone-shell/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/angular-standalone-shell/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-standalone-shell/ng-package.json",
+          "hash": "4858791434689061203"
+        },
+        {
+          "file": "libs/angular-standalone-shell/package.json",
+          "hash": "4668618857520117920",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "angular-integration-interface",
+            "angular-webcomponents",
+            "angular-utils",
+            "integration-interface",
+            "angular-auth",
+            "nx-migration-utils",
+            "npm:@nx/devkit",
+            "npm:primeng",
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-standalone-shell/project.json",
+          "hash": "134062966514341766"
+        },
+        {
+          "file": "libs/angular-standalone-shell/src/index.ts",
+          "hash": "9405310631014308657"
+        },
+        {
+          "file": "libs/angular-standalone-shell/src/lib/components/standalone-shell-viewport/standalone-shell-viewport.component.scss",
+          "hash": "9380389933745712819"
+        },
+        {
+          "file": "libs/angular-standalone-shell/src/lib/components/standalone-shell-viewport/standalone-shell-viewport.component.ts",
+          "hash": "9357559430248610749",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-standalone-shell/src/lib/standalone-shell.module.ts",
+          "hash": "13563478635282610674",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/common",
+            "npm:primeng",
+            "npm:@ngx-translate/core"
+          ]
+        },
+        {
+          "file": "libs/angular-standalone-shell/src/lib/utils/expose-standalone.utils.ts",
+          "hash": "8338184675452833339",
+          "deps": [
+            "npm:@angular/core",
+            "angular-integration-interface",
+            "angular-webcomponents",
+            "npm:@angular/router",
+            "integration-interface",
+            "angular-utils",
+            "angular-auth",
+            "npm:primeng"
+          ]
+        },
+        {
+          "file": "libs/angular-standalone-shell/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-standalone-shell/tsconfig.json",
+          "hash": "13435514026187882015"
+        },
+        {
+          "file": "libs/angular-standalone-shell/tsconfig.lib.json",
+          "hash": "14200934095081983345"
+        },
+        {
+          "file": "libs/angular-standalone-shell/tsconfig.lib.prod.json",
+          "hash": "17572522884110414592"
+        },
+        {
+          "file": "libs/angular-standalone-shell/tsconfig.spec.json",
+          "hash": "15931221680254998227"
+        }
+      ],
+      "angular-webcomponents": [
+        {
+          "file": "libs/angular-webcomponents/.eslintrc.json",
+          "hash": "17918505064909927242"
+        },
+        {
+          "file": "libs/angular-webcomponents/LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "libs/angular-webcomponents/README.md",
+          "hash": "16937285052067638917"
+        },
+        {
+          "file": "libs/angular-webcomponents/jest.config.ts",
+          "hash": "11718467576653116561"
+        },
+        {
+          "file": "libs/angular-webcomponents/migrations.json",
+          "hash": "5281957417375190776"
+        },
+        {
+          "file": "libs/angular-webcomponents/migrations/index.ts",
+          "hash": "4308600275837004356"
+        },
+        {
+          "file": "libs/angular-webcomponents/migrations/tsconfig.json",
+          "hash": "1549492564344312227"
+        },
+        {
+          "file": "libs/angular-webcomponents/migrations/tsconfig.migrations.json",
+          "hash": "5026214308103849915"
+        },
+        {
+          "file": "libs/angular-webcomponents/migrations/v6/migrate-onecx-to-v6.ts",
+          "hash": "11739828030422964627",
+          "deps": [
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-webcomponents/ng-package.json",
+          "hash": "5810110472929825500"
+        },
+        {
+          "file": "libs/angular-webcomponents/package.json",
+          "hash": "12720500661301144217",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/platform-browser",
+            "npm:@angular/elements",
+            "npm:@angular/router",
+            "accelerator",
+            "angular-integration-interface",
+            "integration-interface",
+            "angular-utils",
+            "npm:rxjs",
+            "npm:@nx/devkit",
+            "nx-migration-utils"
+          ]
+        },
+        {
+          "file": "libs/angular-webcomponents/project.json",
+          "hash": "6026945321164669439"
+        },
+        {
+          "file": "libs/angular-webcomponents/sonar-project.properties",
+          "hash": "10207386948250454258"
+        },
+        {
+          "file": "libs/angular-webcomponents/src/index.ts",
+          "hash": "3897819137868358321"
+        },
+        {
+          "file": "libs/angular-webcomponents/src/lib/utils/dynamic-app-id.utils.ts",
+          "hash": "16381993998087393278"
+        },
+        {
+          "file": "libs/angular-webcomponents/src/lib/utils/webcomponent-bootstrap.utils.ts",
+          "hash": "10453734599802200394",
+          "deps": [
+            "npm:@angular/elements",
+            "npm:@angular/platform-browser",
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "accelerator",
+            "integration-interface",
+            "npm:rxjs",
+            "angular-utils",
+            "angular-integration-interface"
+          ]
+        },
+        {
+          "file": "libs/angular-webcomponents/src/lib/utils/webcomponent-router-initializer.utils.ts",
+          "hash": "15426673877302242632",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "angular-integration-interface",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/angular-webcomponents/src/lib/utils/webcomponent-router.utils.ts",
+          "hash": "12370818139328856461",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/angular-webcomponents/src/test-setup.ts",
+          "hash": "12297904228513520493",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "libs/angular-webcomponents/tsconfig.json",
+          "hash": "1074750476616482822"
+        },
+        {
+          "file": "libs/angular-webcomponents/tsconfig.lib.json",
+          "hash": "1836499663297986341"
+        },
+        {
+          "file": "libs/angular-webcomponents/tsconfig.lib.prod.json",
+          "hash": "15349319459182570289"
+        },
+        {
+          "file": "libs/angular-webcomponents/tsconfig.spec.json",
+          "hash": "551998798317460917"
+        }
+      ],
+      "@onecx/onecx-portal-ui-libs": [
+        {
+          "file": ".eslintignore",
+          "hash": "13404745306227114823"
+        },
+        {
+          "file": ".eslintrc.json",
+          "hash": "627093411632561169"
+        },
+        {
+          "file": ".github/actions/setup-environment/action.yml",
+          "hash": "7379576675318904694"
+        },
+        {
+          "file": ".github/copilot-instructions.md",
+          "hash": "1957960040461944857"
+        },
+        {
+          "file": ".github/dependabot.yml",
+          "hash": "115026770818749945"
+        },
+        {
+          "file": ".github/workflows/auto-merge-dependabot-pr.yml",
+          "hash": "4036079432998393223"
+        },
+        {
+          "file": ".github/workflows/build.yml",
+          "hash": "8029191311134006128"
+        },
+        {
+          "file": ".github/workflows/ci-common.yml",
+          "hash": "2168772461841470645"
+        },
+        {
+          "file": ".github/workflows/ci-p.yml",
+          "hash": "11707827554256095796"
+        },
+        {
+          "file": ".github/workflows/ci-pr.yml",
+          "hash": "5851249174166917854"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "hash": "5901820029971841430"
+        },
+        {
+          "file": ".github/workflows/documentation.yml",
+          "hash": "9597918389631742396"
+        },
+        {
+          "file": ".github/workflows/lint.yml",
+          "hash": "12316721522812947018"
+        },
+        {
+          "file": ".github/workflows/nx.yml",
+          "hash": "17174444387179180566"
+        },
+        {
+          "file": ".github/workflows/release.yml",
+          "hash": "1055918673515026277"
+        },
+        {
+          "file": ".github/workflows/sonar-pr.yml",
+          "hash": "11762448022190383484"
+        },
+        {
+          "file": ".github/workflows/sonar.yml",
+          "hash": "10392463175912952900"
+        },
+        {
+          "file": ".github/workflows/storybook-build-fork.yml",
+          "hash": "2051524449443203883"
+        },
+        {
+          "file": ".github/workflows/storybook.yml",
+          "hash": "11848794964730086889"
+        },
+        {
+          "file": ".github/workflows/test.yml",
+          "hash": "1860852518975890927"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "7561111389014220131"
+        },
+        {
+          "file": ".prettierignore",
+          "hash": "984959933605562954"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "6987317927177412942"
+        },
+        {
+          "file": ".storybook/main.js",
+          "hash": "2401068821734540062"
+        },
+        {
+          "file": ".storybook/tsconfig.json",
+          "hash": "9360079605619560392"
+        },
+        {
+          "file": "CHANGELOG.md",
+          "hash": "12438229924683325859"
+        },
+        {
+          "file": "LICENSE",
+          "hash": "1539253793410688689"
+        },
+        {
+          "file": "README.md",
+          "hash": "6121517517507631375"
+        },
+        {
+          "file": "copy-build.js",
+          "hash": "8672349888704401779"
+        },
+        {
+          "file": "default.sonar-project.properties",
+          "hash": "15081378927982688192"
+        },
+        {
+          "file": "dev-docs/general/overview.adoc",
+          "hash": "10132765857816244448"
+        },
+        {
+          "file": "dev-docs/storybook/concept.adoc",
+          "hash": "9786244802552631971"
+        },
+        {
+          "file": "dev-docs/storybook/docs-creation.adoc",
+          "hash": "16628697203465942957"
+        },
+        {
+          "file": "dev-docs/storybook/dod.adoc",
+          "hash": "9307835122754460331"
+        },
+        {
+          "file": "dev-docs/storybook/setup.adoc",
+          "hash": "14211754452741214316"
+        },
+        {
+          "file": "dev-docs/storybook/story-creation.adoc",
+          "hash": "500411748287632309"
+        },
+        {
+          "file": "dev-docs/styles/concept.adoc",
+          "hash": "16065938193117709017"
+        },
+        {
+          "file": "dev-docs/styles/primeng-scoping.adoc",
+          "hash": "4257739006935766757"
+        },
+        {
+          "file": "dev-docs/styles/primeng-token-variables.adoc",
+          "hash": "3797409487207468649"
+        },
+        {
+          "file": "dev-docs/styles/scope-polyfill.adoc",
+          "hash": "12092725487910820672"
+        },
+        {
+          "file": "dev-docs/styles/scoping.adoc",
+          "hash": "2084051213007205652"
+        },
+        {
+          "file": "dev-docs/styles/style-types.adoc",
+          "hash": "12609706130798708550"
+        },
+        {
+          "file": "dev-docs/theming/concept.adoc",
+          "hash": "15895215601074696661"
+        },
+        {
+          "file": "dev-docs/theming/primeng.adoc",
+          "hash": "8597825103721444507"
+        },
+        {
+          "file": "dev-docs/theming/theme-overrides.adoc",
+          "hash": "12519880232235116968"
+        },
+        {
+          "file": "dev-docs/topics/debug.adoc",
+          "hash": "5161559471672110542"
+        },
+        {
+          "file": "docs/antora.yml",
+          "hash": "9989235659426178836"
+        },
+        {
+          "file": "docs/modules/contributions/pages/local-development.adoc",
+          "hash": "5925073760710329394"
+        },
+        {
+          "file": "docs/modules/general/nav.adoc",
+          "hash": "2176349938465176866"
+        },
+        {
+          "file": "docs/modules/general/pages/index.adoc",
+          "hash": "8811047984550864221"
+        },
+        {
+          "file": "jest-config-factory.ts",
+          "hash": "6610911713738183061"
+        },
+        {
+          "file": "jest.config.ts",
+          "hash": "611448871269583579",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "jest.preset.js",
+          "hash": "6144887150774220801",
+          "deps": [
+            "npm:@nx/jest"
+          ]
+        },
+        {
+          "file": "migrations.json",
+          "hash": "11352669939743239335"
+        },
+        {
+          "file": "normalize-lcov.sh",
+          "hash": "1610168933228520279"
+        },
+        {
+          "file": "nx.json",
+          "hash": "1894480031034748610"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "8163632937041004226"
+        },
+        {
+          "file": "package.json",
+          "hash": "2044456051416896353",
+          "deps": [
+            "npm:@angular-devkit/architect",
+            "npm:@angular-devkit/build-angular",
+            "npm:@angular-devkit/core",
+            "npm:@angular-devkit/schematics",
+            "npm:@angular-eslint/eslint-plugin",
+            "npm:@angular-eslint/eslint-plugin-template",
+            "npm:@angular-eslint/template-parser",
+            "npm:@angular/cli",
+            "npm:@angular/compiler-cli",
+            "npm:@angular/language-service",
+            "npm:@chromatic-com/storybook",
+            "npm:@happy-dom/jest-environment",
+            "npm:@nx/angular",
+            "npm:@nx/esbuild",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/jest",
+            "npm:@nx/js",
+            "npm:@nx/node",
+            "npm:@nx/plugin",
+            "npm:@nx/storybook",
+            "npm:@nx/workspace",
+            "npm:@schematics/angular",
+            "npm:@semantic-release/changelog",
+            "npm:@semantic-release/commit-analyzer",
+            "npm:@semantic-release/exec",
+            "npm:@semantic-release/git",
+            "npm:@semantic-release/release-notes-generator",
+            "npm:@storybook/addon-a11y",
+            "npm:@storybook/addon-essentials",
+            "npm:@storybook/angular",
+            "npm:@storybook/core-server",
+            "npm:@swc-node/register",
+            "npm:@swc/cli",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@types/axios",
+            "npm:@types/d3",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/pg",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:@typescript-eslint/utils",
+            "npm:blob-polyfill",
+            "npm:conventional-changelog-conventionalcommits",
+            "npm:esbuild",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:happy-dom",
+            "npm:jest",
+            "npm:jest-canvas-mock",
+            "npm:jest-environment-jsdom",
+            "npm:jest-environment-node",
+            "npm:jest-extended",
+            "npm:jest-preset-angular",
+            "npm:jsonc-eslint-parser",
+            "npm:msw",
+            "npm:msw-storybook-addon",
+            "npm:ng-mocks",
+            "npm:ng-packagr",
+            "npm:ngx-translate-testing",
+            "npm:nx",
+            "npm:nx-release",
+            "npm:pg",
+            "npm:postcss",
+            "npm:postcss-import",
+            "npm:postcss-preset-env",
+            "npm:postcss-scss",
+            "npm:postcss-url",
+            "npm:prettier",
+            "npm:replace-json-property",
+            "npm:ts-jest",
+            "npm:ts-jest-mock-import-meta",
+            "npm:ts-node",
+            "npm:typescript",
+            "npm:sonarqube-scanner",
+            "npm:@angular-architects/module-federation",
+            "npm:@angular/animations",
+            "npm:@angular/cdk",
+            "npm:@angular/common",
+            "npm:@angular/compiler",
+            "npm:@angular/core",
+            "npm:@angular/elements",
+            "npm:@angular/forms",
+            "npm:@angular/platform-browser",
+            "npm:@angular/platform-browser-dynamic",
+            "npm:@angular/router",
+            "npm:@ngneat/until-destroy",
+            "npm:@ngrx/effects",
+            "npm:@ngrx/operators",
+            "npm:@ngrx/router-store",
+            "npm:@ngrx/store",
+            "npm:@ngrx/store-devtools",
+            "npm:@ngx-translate/core",
+            "npm:@ngx-translate/http-loader",
+            "npm:@nx/devkit",
+            "npm:@phenomnomnominal/tsquery",
+            "npm:@primeng/themes",
+            "npm:@storybook/addon-interactions",
+            "npm:axios",
+            "npm:chart.js",
+            "npm:d3-scale-chromatic",
+            "npm:fast-deep-equal",
+            "npm:jest-sonar",
+            "npm:keycloak-js",
+            "npm:ngx-color",
+            "npm:node-html-parser",
+            "npm:primeflex",
+            "npm:primeicons",
+            "npm:primelocale",
+            "npm:primeng",
+            "npm:rxjs",
+            "npm:storybook",
+            "npm:ts-semaphore",
+            "npm:tslib",
+            "npm:zod",
+            "npm:zone.js"
+          ]
+        },
+        {
+          "file": "release-script.sh",
+          "hash": "3544017704108661472"
+        },
+        {
+          "file": "release.config.js",
+          "hash": "12675952991907267404"
+        },
+        {
+          "file": "sonar-all.js",
+          "hash": "2326172204145247019"
+        },
+        {
+          "file": "sonar-single.js",
+          "hash": "12683115023318647805"
+        },
+        {
+          "file": "storybook-migration-summary.md",
+          "hash": "17986842724630869529"
+        },
+        {
+          "file": "tsconfig.base.json",
+          "hash": "13273959465415632502"
+        },
+        {
+          "file": "update-guide.md",
+          "hash": "6101278271297489110"
+        },
+        {
+          "file": "update_libs.sh",
+          "hash": "5766569184131914008"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}

@@ -1,0 +1,11 @@
+[NX Daemon Server] - 2026-03-28T16:58:18.970Z - Started listening on: \\.\pipe\nx\C:\Users\prath\AppData\Local\Temp\b2477179062e398655ea\d.sock
+[NX Daemon Server] - 2026-03-28T16:58:19.059Z - [WATCHER]: Subscribed to changes within: D:\onecx\docs-onecx\v5 (native)
+[NX Daemon Server] - 2026-03-28T16:58:19.070Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-03-28T16:58:19.073Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2026-03-28T16:58:19.082Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2026-03-28T16:58:19.103Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2026-03-28T16:58:19.120Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2026-03-28T16:58:19.126Z - Handled FORCE_SHUTDOWN. Handling time: 5. Response time: 23.
+[NX Daemon Server] - 2026-03-28T16:58:19.127Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2026-03-28T16:58:19.130Z - [WATCHER]: Stopping the watcher for D:\onecx\docs-onecx\v5 (sources)
+[NX Daemon Server] - 2026-03-28T16:58:19.131Z - [WATCHER]: Stopping the watcher for D:\onecx\docs-onecx\v5 (outputs)

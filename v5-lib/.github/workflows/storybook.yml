@@ -1,0 +1,30 @@
+name: Build and deploy Storybook
+on: 
+  push:
+    branches:
+      - 'main'
+      - 'v*'
+jobs:
+  build-and-deploy-storybook:
+    runs-on: ubuntu-latest
+    environment: Storybook
+    env:
+      AA_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN_AA }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Show npm registry
+        run: npm config get registry
+      - name: Install dependencies
+        run: npm ci
+      - name: Build AA Storybook
+        run: npx nx run angular-accelerator:build-storybook
+      - name: Publish to AA Chromatic
+        uses: chromaui/action@latest
+        if: ${{ (env.AA_TOKEN != null) && (env.AA_TOKEN != '') }}
+        with:
+          projectToken: ${{ env.AA_TOKEN }}
+          storybookBuildDir: dist/storybook/angular-accelerator
+          skip: 'dependabot/**'

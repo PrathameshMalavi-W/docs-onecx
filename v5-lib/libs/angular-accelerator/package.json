@@ -1,0 +1,41 @@
+{
+  "name": "@onecx/angular-accelerator",
+  "version": "5.53.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onecx/onecx-portal-ui-libs"
+  },
+  "peerDependencies": {
+    "@angular/common": "^18.0.5",
+    "@angular/core": "^18.0.5",
+    "@angular/cdk": "^18.0.6",
+    "@angular/forms": "^18.0.5",
+    "@angular/platform-browser": "^18.0.5",
+    "@angular/router": "^18.0.5",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
+    "@ngneat/until-destroy": "^10.0.0",
+    "@onecx/integration-interface": "^5.53.1",
+    "@onecx/accelerator": "^5.53.1",
+    "@onecx/angular-integration-interface": "^5.53.1",
+    "@onecx/angular-remote-components": "^5.53.1",
+    "@onecx/angular-testing": "^5.53.1",
+    "@onecx/angular-utils": "^5.53.1",
+    "chart.js": "^4.4.3",
+    "d3-scale-chromatic": "^3.1.0",
+    "fast-deep-equal": "^3.1.3",
+    "rxjs": "~7.8.1",
+    "primeng": "^17.18.6",
+    "@storybook/angular": "^8.3.2"
+  },
+  "dependencies": {},
+  "exports": {
+    ".": {
+      "style": "./assets/styles.scss"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
