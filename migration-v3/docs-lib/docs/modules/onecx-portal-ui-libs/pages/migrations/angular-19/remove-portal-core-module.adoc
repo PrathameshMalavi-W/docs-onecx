@@ -1,0 +1,51 @@
+[#remove-portal-core-module]
+= Remove PortalCoreModule
+
+In OneCX v6, `PortalCoreModule` has been replaced with `AngularAcceleratorModule`.
+
+== Update imports
+
+* Replace all imports of `PortalCoreModule` from '@onecx/portal-integration-angular' with `AngularAcceleratorModule` from `@onecx/angular-accelerator`.
+* Replace `PortalCoreModule` (also `PortalCoreModule.forRoot()`, `PortalCoreModule.forMicroFrontend()`) with `AngularAcceleratorModule`.
+
+=== Example
+
+.Before
+[source, typescript]
+----
+import { PortalCoreModule } from "@onecx/portal-integration-angular";
+
+@Component({
+  standalone: true,
+  imports: [PortalCoreModule]
+})
+----
+
+.After
+[source, typescript]
+----
+import { AngularAcceleratorModule } from "@onecx/angular-accelerator";
+
+@Component({
+  standalone: true,
+  imports: [AngularAcceleratorModule]
+})
+----
+
+[#remove-portal-integration-angular]
+== Remove '@onecx/portal-integration-angular'
+
+`@onecx/portal-integration-angular` is no longer available in OneCX v6 and must be completely removed from the application at this point.
+
+=== Verify All Imports Are Migrated
+
+Before removing the package, ensure that all imports from `@onecx/portal-integration-angular` have been removed or properly migrated to their new locations as outlined in the xref:./update-component-imports.adoc#update-component-imports[Update Component Imports] section.
+
+=== Uninstall the Package
+
+Once all imports have been migrated, remove the deprecated package:
+
+[source,bash]
+----
+npm uninstall @onecx/portal-integration-angular
+----

@@ -1,0 +1,19 @@
+{
+  "chat.instructionsFilesLocations": {
+    "copilot-onecx-migration-kit/instructions": true
+  },
+  "chat.agentFilesLocations": {
+    "copilot-onecx-migration-kit/agents": true
+  },
+  "chat.promptFilesLocations": {
+    "copilot-onecx-migration-kit/prompts": true
+  },
+  "chat.agentSkillsLocations": {
+    "copilot-onecx-migration-kit/skills": true
+  },
+  "chat.hookFilesLocations": {
+    "copilot-onecx-migration-kit/hooks": true
+  },
+  "chat.useCustomAgentHooks": true,
+  "chat.promptFilesRecommendations": true
+}
