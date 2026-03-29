@@ -14,16 +14,34 @@ Use this skill when:
 ## Core rules
 
 1. Treat `MIGRATION_PROGRESS.md` as the source of truth.
-2. Infer the migration context from the repo and user request.
-3. Discover the docs at runtime.
-4. Build a hierarchy:
+2. Start with initialization:
+   - dependency install
+   - test audit
+   - branch protection
+   - coverage baseline if available
+   - instructions audit
+   - task verification
+3. Require the user to specify the intended target version at migration start.
+4. Infer the current migration context from the repo.
+5. Discover the docs at runtime.
+6. Build a hierarchy:
    - parent tasks
    - child tasks
    - leaf tasks
-5. Execute only leaf tasks.
-6. Validate before completion.
-7. Ask the user only for major actions or missing required input.
-8. At the core-upgrade gate, ask for approval first; after approval, perform the upgrade as the agent.
+7. Execute only leaf tasks.
+8. Validate before completion.
+9. Ask the user only for major actions or missing required input.
+10. At the core-upgrade gate, ask for approval first; after approval, perform the upgrade as the agent.
+
+## OneCX-specific enforcement
+
+- Prefer OneCX MCP first, then PrimeNG or Nx sources as relevant, then fallback URLs.
+- Use tasks for build, lint, and test where available, and fall back to terminal only when tasks are not suitable.
+- If a build, lint, or test step fails, capture the last 20 useful log lines and record likely causes.
+- Use a fixed documented Nx migrate version when Nx upgrade work is required.
+- Do not guess ambiguous documentation details.
+- Do not guess the migration target; take it from the init prompt and validate it against repo state and docs.
+- At the pre-upgrade boundary, prepare a clean checkpoint summary, working tree status, and a concise upgrade cheat-sheet before asking for approval.
 
 ## Good runtime behavior
 

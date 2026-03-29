@@ -1,18 +1,18 @@
 {
   "chat.instructionsFilesLocations": {
-    "migration-v2/instructions": true
+    "migration-v3/instructions": true
   },
   "chat.agentFilesLocations": {
-    "migration-v2/agents": true
+    "migration-v3/agents": true
   },
   "chat.promptFilesLocations": {
-    "migration-v2/prompts": true
+    "migration-v3/prompts": true
   },
   "chat.agentSkillsLocations": {
-    "migration-v2/skills": true
+    "migration-v3/skills": true
   },
   "chat.hookFilesLocations": {
-    "migration-v2/hooks": true
+    "migration-v3/hooks": true
   },
   "chat.useCustomAgentHooks": true,
   "chat.promptFilesRecommendations": true

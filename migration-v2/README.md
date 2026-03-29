@@ -61,6 +61,34 @@ This workflow is standardized on this model:
 
 So the user does not have to manually perform the core upgrade unless they want to.
 
+## How `migration-v2` chooses the migration path
+
+`migration-v2` should not guess the target version blindly.
+
+The intended behavior is:
+- the user states the desired target version in the init prompt
+- the planner infers the current repo state
+- the planner matches the requested target against the documented migration guides
+
+For OneCX, this usually means:
+- Angular `18` plus OneCX libs `v5.x` can map to the `18 -> 19` guide
+- Angular `19` plus OneCX libs `v6.x` can map to the `19 -> 20` guide
+
+If the target version is missing, or if the repo state and requested target do not line up with a documented path, the planner should stop and ask one concise major question.
+
+## Alignment with the root `ai-prompt.txt`
+
+`migration-v2` is intended to preserve the guardrails from [ai-prompt.txt](D:/onecx/docs-onecx/ai-prompt.txt) while making the workflow runtime-driven instead of version-hardcoded.
+
+That means it should still enforce:
+- Phase 1 initialization before planning
+- detailed `MIGRATION_PROGRESS.md` updates
+- one leaf task at a time
+- task-based build, lint, and test validation where suitable
+- fixed documented Nx migration versions
+- explicit approval before the core upgrade
+- post-upgrade validation before resuming execution
+
 ## Folder contents
 
 ```text
@@ -107,7 +135,7 @@ migration-v2/
 3. Read [file-guide.md](./docs/file-guide.md)
 4. Copy [vscode.settings.example.json](./settings/vscode.settings.example.json) into your workspace `.vscode/settings.json`
 5. Open Copilot Chat in VS Code
-6. Start with `/migration-init`
+6. Start with `/migration-init migrate to Angular 19` or `/migration-init migrate to Angular 20`
 
 ## Minimal setup in the target OneCX app repo
 
@@ -120,13 +148,13 @@ These are the files or concepts you really need:
 1. One always-on instructions file
    - `instructions/migration-runtime.instructions.md`
 
-2. Three core agents
+2. Four core agents
    - `agents/migration-planner.agent.md`
    - `agents/migration-step-executor.agent.md`
    - `agents/migration-validator.agent.md`
    - `agents/migration-core-upgrade.agent.md`
 
-3. Three core prompt files
+3. Four core prompt files
    - `prompts/migration-init.prompt.md`
    - `prompts/migration-next-step.prompt.md`
    - `prompts/migration-validate.prompt.md`
@@ -162,9 +190,11 @@ If you want the leanest practical setup in a OneCX app repo, copy only:
 - planner agent
 - step executor agent
 - validator agent
+- core-upgrade agent
 - init prompt
 - next-step prompt
 - validate prompt
+- core-upgrade prompt
 - progress template
 
 Everything else is optional.
@@ -200,7 +230,7 @@ If you use the default locations, you may not need the custom-location settings 
 ### 1. Runtime planning
 
 The planner should:
-- infer the migration family from the repo or user prompt
+- take the intended target from the user prompt and infer the current repo state
 - discover the relevant migration docs at runtime
 - read the migration index
 - read each linked migration page

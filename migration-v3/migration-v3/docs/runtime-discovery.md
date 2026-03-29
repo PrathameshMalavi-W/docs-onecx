@@ -41,6 +41,10 @@ For a real OneCX app repo, this usually means:
 
 Local repository docs are optional and should not be assumed.
 
+Important rule:
+- treat narrow MCP query results as discovery aids, not as final implementation authority
+- if a query returns unrelated snippets or an unclear page, fetch the broader canonical page before planning or coding
+
 ### 3. Read the migration index
 
 The planner should:
@@ -67,6 +71,7 @@ Use these rules:
 - procedural page -> parent task + child section tasks
 - simple page -> one leaf task
 - notes/examples are not tasks unless they contain a required action
+- keep package updates in dedicated package/version leaf tasks instead of mixing them into unrelated refactors
 
 ### 6. Check repository applicability
 
@@ -74,6 +79,10 @@ Before marking something not applicable:
 - inspect the repository
 - capture evidence
 - attach it to the task entry
+
+Validation note:
+- use targeted repository evidence for leaf-level validation by default
+- do not require a full build after every intermediate migration step
 
 ### 7. Persist the result
 

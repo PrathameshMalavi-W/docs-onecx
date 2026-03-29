@@ -5,13 +5,28 @@
 ### Phase 1: Initialization and planning
 
 Run:
-- `/migration-init`
+- `/migration-init migrate to Angular 19`
+
+or:
+- `/migration-init migrate to Angular 20`
 
 Expected result:
+- the planner runs the initialization checks from the root workflow
 - the planner audits the repo
+- the planner takes the user-requested target version as the intended destination
 - the planner discovers the migration docs at runtime
 - the planner creates `MIGRATION_PROGRESS.md`
 - the planner stops
+
+Initialization should cover:
+- dependency install
+- baseline test audit
+- protected-branch check
+- coverage capture when available
+- Copilot-instructions audit
+- task configuration audit
+- runtime docs discovery
+- migration hierarchy creation
 
 What you should review:
 - the inferred migration context
@@ -55,6 +70,8 @@ Run:
 
 Expected result:
 - the handover agent summarizes what is done
+- it reports whether the work is at a clean pre-upgrade checkpoint
+- it includes the core-upgrade cheat-sheet and major package/version notes
 - it asks for explicit approval before the core upgrade phase
 
 ### Phase 6: Core upgrade after approval
@@ -75,12 +92,17 @@ After the core upgrade is done, continue with:
 - `/migration-next-step`
 - `/migration-validate`
 
+At the start of post-migration execution, the workflow should also:
+- record the core-upgrade result in `MIGRATION_PROGRESS.md`
+- validate the upgrade state with build, lint, and test tasks when suitable
+- resume leaf execution only after that checkpoint is clear
+
 ## When the user should be asked something
 
 Only ask the user when:
 - a protected branch blocks execution
 - docs are ambiguous
-- the migration target cannot be inferred
+- the target version is missing or the requested target conflicts with repo state
 - an external change is required
 - a risky decision has to be made
 - the next phase explicitly requires approval
@@ -90,7 +112,7 @@ Routine applicability checks should not be pushed to the user.
 ## Suggested chat pattern
 
 1. Start a fresh chat
-2. Run `/migration-init`
+2. Run `/migration-init migrate to Angular 19` or `/migration-init migrate to Angular 20`
 3. Review the plan
 4. Run `/migration-next-step`
 5. Run `/migration-validate`

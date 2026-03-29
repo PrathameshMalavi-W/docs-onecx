@@ -29,6 +29,9 @@ Rules:
 - Do not mark a task complete just because a grep looked clean.
 - If a task is not applicable, mark it `[-] not applicable` only with file-based evidence.
 - If validation is still needed, leave the leaf unresolved.
+- Use VS Code tasks instead of manual terminal commands when a suitable task exists.
+- If execution fails, record the last 20 useful log lines and the likely root cause in `MIGRATION_PROGRESS.md`.
+- If a step fails, keep it unresolved, document the failure, and propose the next recovery action.
 - Ask the user only if a major decision or missing external action blocks progress.
 
 Helpful references:

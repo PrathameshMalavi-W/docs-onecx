@@ -14,16 +14,17 @@ Use this skill when:
 ## Core rules
 
 1. Treat `MIGRATION_PROGRESS.md` as the source of truth.
-2. Infer the migration context from the repo and user request.
-3. Discover the docs at runtime.
-4. Build a hierarchy:
+2. Require the user to specify the intended target version at migration start.
+3. Infer the current migration context from the repo.
+4. Discover the docs at runtime.
+5. Build a hierarchy:
    - parent tasks
    - child tasks
    - leaf tasks
-5. Execute only leaf tasks.
-6. Validate before completion.
-7. Ask the user only for major actions or missing required input.
-8. At the core-upgrade gate, ask for approval first; after approval, perform the upgrade as the agent.
+6. Execute only leaf tasks.
+7. Validate before completion.
+8. Ask the user only for major actions or missing required input.
+9. At the core-upgrade gate, ask for approval first; after approval, perform the upgrade as the agent.
 
 ## Good runtime behavior
 
@@ -31,6 +32,7 @@ Use this skill when:
 - handle conditional steps from docs
 - derive applicability from repository evidence
 - keep the progress file stable across long sessions
+- take the migration target from the init prompt instead of guessing it
 
 ## What not to do
 

@@ -1,0 +1,11 @@
+{
+  "chat.instructionsFilesLocations": [
+    "migration-v4/instructions"
+  ],
+  "chat.agentFilesLocations": [
+    "migration-v4/agents"
+  ],
+  "chat.promptFilesLocations": [
+    "migration-v4/prompts"
+  ]
+}

@@ -73,9 +73,10 @@ The template file can live anywhere, but keeping it in the repository is conveni
 
 ### Option A: Prompt-driven workflow
 
-1. Run `/onecx-init`
+1. Run `/onecx-init migrate to Angular 19`
    - This uses the planner agent.
    - It should create or refresh `MIGRATION_PROGRESS.md`.
+   - It should take the user-requested target version from the init prompt.
    - It should read the OneCX Angular 19 index and then expand each linked migration page.
    - It should split parent pages, child pages, and section-level actions into hierarchical tasks.
    - It should stop after Phase 1.
@@ -131,6 +132,8 @@ Use the agents directly from the agent picker:
 ## Notes
 
 - This kit assumes the target repository has access to the OneCX MCP server when available.
+- This kit is intentionally scoped to the OneCX Angular `18 -> 19` path. The init prompt should therefore specify `Angular 19` as the target version.
+- If the user requests a different target version, the planner should stop and tell them to use a more generic workflow such as `migration-v2`, `migration-v3`, or `migration-v4`.
 - If the MCP server is unavailable, the workflow should fall back to the documented OneCX public migration pages.
 - For Nx workspaces, the planner should include the OneCX Nx migration page and the documented fixed `nx migrate` version.
 - For PrimeNG usage, the planner should include PrimeNG migration tasks in the post-migration phase.

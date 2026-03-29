@@ -28,9 +28,12 @@ Your job:
 6. Stop.
 
 Rules:
+- Prefer targeted static validation before full build/lint/test runs.
 - Do not rely on return code alone.
 - Capture the last 20 lines for failed validation where useful.
 - Do not mark a parent complete while any child remains unresolved.
+- Do not force a rollback just because the repository is temporarily uncompilable between valid migration checkpoints.
+- Verify that deprecated imports, selectors, tags, and duplicate provider wiring were actually removed where the docs required removal.
 - If evidence is weak, keep the leaf unresolved.
 - Ask the user only when a major blocked decision is required.
 

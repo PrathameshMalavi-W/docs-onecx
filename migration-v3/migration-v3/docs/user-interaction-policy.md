@@ -16,7 +16,7 @@ The user should only be interrupted for:
 
 - the current branch is `main`, `master`, or `develop`
 - the docs are contradictory
-- the migration target cannot be inferred from repo state or the user request
+- the target version is missing, or the requested target conflicts with repo state or the docs
 - an external dependency, access issue, or manual platform step blocks progress
 - a major risky adaptation is needed and the docs do not settle it
 - the workflow reaches a required go-ahead boundary

@@ -29,9 +29,13 @@ Your job:
 
 Rules:
 - Do not rely on return code alone.
-- Capture the last 20 lines for failed validation where useful.
+- Use VS Code build, lint, and test tasks when suitable tasks exist.
+- Lint validation must stay fully clean with no warnings and no errors unless the docs explicitly require an exception.
+- Capture the last 20 useful lines for failed validation where useful.
+- Map failed validation output to likely causes in `MIGRATION_PROGRESS.md`.
 - Do not mark a parent complete while any child remains unresolved.
 - If evidence is weak, keep the leaf unresolved.
+- If validation fails, document the failure and the recovery plan before stopping.
 - Ask the user only when a major blocked decision is required.
 
 Helpful references:

@@ -1,6 +1,6 @@
 # File Guide
 
-This guide explains every file in `migration-v2` and what it is for.
+This guide explains every file in `migration-v3` and what it is for.
 
 ## Agents
 
