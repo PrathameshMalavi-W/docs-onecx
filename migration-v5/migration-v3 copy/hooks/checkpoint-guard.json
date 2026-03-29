@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "windows": "powershell -ExecutionPolicy Bypass -File \"migration-v3\\scripts\\checkpoint-reminder.ps1\"",
+        "timeout": 15
+      }
+    ],
+    "PreCompact": [
+      {
+        "type": "command",
+        "windows": "powershell -ExecutionPolicy Bypass -File \"migration-v3\\scripts\\checkpoint-reminder.ps1\"",
+        "timeout": 15
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "windows": "powershell -ExecutionPolicy Bypass -File \"migration-v3\\scripts\\checkpoint-reminder.ps1\"",
+        "timeout": 15
+      }
+    ]
+  }
+}
