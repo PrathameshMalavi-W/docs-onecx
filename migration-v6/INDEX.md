@@ -9,9 +9,10 @@
 
 **New to migration-v6?** Start in this order:
 1. [README.md](README.md) — 5-min overview, design principles
-2. [SETUP.md](SETUP.md) — Choose setup option, verify
-3. [USAGE.md](USAGE.md) — Commands, skip~N, error handling
-4. [templates/README.md](templates/README.md) — Full 30-min workflow
+2. [PHASE-1-INTEGRATION-SUMMARY.md](PHASE-1-INTEGRATION-SUMMARY.md) — What was added from v2/v3 patterns
+3. [SETUP.md](SETUP.md) — Choose setup option, verify
+4. [USAGE.md](USAGE.md) — Commands, skip~N, error handling, **phase gates**
+5. [templates/README.md](templates/README.md) — Full 30-min workflow
 
 **Experienced?** Jump to [USAGE.md](USAGE.md) and run: `@migration-orchestrator-v6 "Start Phase 1"`
 
@@ -43,11 +44,21 @@ Use template to create `MIGRATION_PROGRESS.md` in your repo.
 
 Located in `docs/`:
 
-| Doc | Topic | When to use |
-|-----|-------|------------|
-| [AGENT-RULES.md](docs/AGENT-RULES.md) | Core behavior contract | Understanding agent limits |
-| [SKIP-FUNCTIONALITY.md](docs/SKIP-FUNCTIONALITY.md) | Skip~N command | Using skip~N to advance quickly |
-| [STRICT-DOC-EXPANSION.md](docs/STRICT-DOC-EXPANSION.md) | No-assumption rule | Understanding why planner fetches all links |
+| Doc                                                                         | Topic                                  | When to use                                                               |
+| --------------------------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------- |
+| [AGENT-RULES.md](docs/AGENT-RULES.md)                                       | Core behavior contract                 | Understanding agent limits & when agents ask users                        |
+| [HARD-RULES.md](docs/HARD-RULES.md)                                         | Non-negotiable constraints (H1–H20)    | Understanding mandatory safety guardrails                                 |
+| [NEVER-SKIP-ALWAYS-FIX-PROTOCOL.md](docs/NEVER-SKIP-ALWAYS-FIX-PROTOCOL.md) | Task completion & error-fixing rules   | Executor must complete tasks and fix all errors                           |
+| [MULTI-PHASE-ERROR-TRACKING.md](docs/MULTI-PHASE-ERROR-TRACKING.md)         | Phase-specific error handling          | Pre-migration vs post-migration error tracking                            |
+| [EXECUTOR-PHASE-SUPPORT.md](docs/EXECUTOR-PHASE-SUPPORT.md)                 | Executor phase behavior overview       | Understand Phase A/B/C error handling differences                         |
+| [VERSION-AWARE-UPGRADE-PROTOCOL.md](docs/VERSION-AWARE-UPGRADE-PROTOCOL.md) | Version resolution & upgrade execution | How executor handles ^X→stable, MCP-first fetching, user permission gates |
+| [RUNTIME-DISCOVERY-PIPELINE.md](docs/RUNTIME-DISCOVERY-PIPELINE.md)         | 7-stage doc discovery process          | Understanding how planner builds task tree                                |
+| [CONTEXT-PRESERVATION-MANDATE.md](docs/CONTEXT-PRESERVATION-MANDATE.md)     | How agents maintain state              | Preventing lazy context loss                                              |
+| [REAL-WORLD-FINDINGS.md](docs/REAL-WORLD-FINDINGS.md)                       | Issues from actual migrations          | Understanding what failed and why                                         |
+| [V6-REAL-WORLD-IMPROVEMENTS.md](docs/V6-REAL-WORLD-IMPROVEMENTS.md)         | How V6 addresses real-world issues     | Quality improvements in v6                                                |
+| [V2-V3-BORROWING-PLAN.md](docs/V2-V3-BORROWING-PLAN.md)                     | Patterns borrowed from v2/v3           | Understanding v6 architecture decisions                                   |
+| [SKIP-FUNCTIONALITY.md](docs/SKIP-FUNCTIONALITY.md)                         | Skip~N command                         | Using skip~N to advance quickly                                           |
+| [STRICT-DOC-EXPANSION.md](docs/STRICT-DOC-EXPANSION.md)                     | No-assumption rule                     | Understanding why planner fetches all links                               |
 
 ---
 
@@ -141,13 +152,13 @@ See [SETUP.md](SETUP.md) for detailed instructions.
 
 ## 🆘 Troubleshooting
 
-| Issue | Fix | Docs |
-|-------|-----|------|
-| npm install fails | Fix dependency, retry Phase 1 | [USAGE.md](USAGE.md#troubleshooting) |
-| Build warns but passes | Still mark failing (0 warnings required) | [AGENT-RULES.md](docs/AGENT-RULES.md) |
-| Not sure if task applies | Run task, let executor decide | [AGENT-RULES.md](docs/AGENT-RULES.md) |
-| Want to skip complex task | Use Skip~N (carefully!) | [SKIP-FUNCTIONALITY.md](docs/SKIP-FUNCTIONALITY.md) |
-| Planner skipped a link | Report issue, planner must visit all | [STRICT-DOC-EXPANSION.md](docs/STRICT-DOC-EXPANSION.md) |
+| Issue                     | Fix                                      | Docs                                                    |
+| ------------------------- | ---------------------------------------- | ------------------------------------------------------- |
+| npm install fails         | Fix dependency, retry Phase 1            | [USAGE.md](USAGE.md#troubleshooting)                    |
+| Build warns but passes    | Still mark failing (0 warnings required) | [AGENT-RULES.md](docs/AGENT-RULES.md)                   |
+| Not sure if task applies  | Run task, let executor decide            | [AGENT-RULES.md](docs/AGENT-RULES.md)                   |
+| Want to skip complex task | Use Skip~N (carefully!)                  | [SKIP-FUNCTIONALITY.md](docs/SKIP-FUNCTIONALITY.md)     |
+| Planner skipped a link    | Report issue, planner must visit all     | [STRICT-DOC-EXPANSION.md](docs/STRICT-DOC-EXPANSION.md) |
 
 ---
 
@@ -198,15 +209,15 @@ Total              11 files  (~4K lines)
 
 ## 📞 Reference
 
-| Need | Where |
-|------|-------|
-| Setup help | [SETUP.md](SETUP.md) |
-| Command reference | [USAGE.md](USAGE.md) |
-| Full workflow | [templates/README.md](templates/README.md) |
-| Agent behavior | [docs/AGENT-RULES.md](docs/AGENT-RULES.md) |
-| Skip explanation | [docs/SKIP-FUNCTIONALITY.md](docs/SKIP-FUNCTIONALITY.md) |
+| Need                | Where                                                        |
+| ------------------- | ------------------------------------------------------------ |
+| Setup help          | [SETUP.md](SETUP.md)                                         |
+| Command reference   | [USAGE.md](USAGE.md)                                         |
+| Full workflow       | [templates/README.md](templates/README.md)                   |
+| Agent behavior      | [docs/AGENT-RULES.md](docs/AGENT-RULES.md)                   |
+| Skip explanation    | [docs/SKIP-FUNCTIONALITY.md](docs/SKIP-FUNCTIONALITY.md)     |
 | Doc discovery rules | [docs/STRICT-DOC-EXPANSION.md](docs/STRICT-DOC-EXPANSION.md) |
-| Design overview | [README.md](README.md) |
+| Design overview     | [README.md](README.md)                                       |
 
 ---
 

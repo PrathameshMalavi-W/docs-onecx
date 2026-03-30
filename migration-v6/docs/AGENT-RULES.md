@@ -4,6 +4,63 @@
 
 ---
 
+## Universal Agent Rules (All Agents)
+
+### When to Ask the User (ALWAYS ASK IMMEDIATELY)
+
+✅ **Ask the user immediately for these major decisions:**
+- Current branch is `main`, `master`, or `develop` (must create feature branch first)
+- The documentation is contradictory or unclear
+- The target version is missing or conflicts with repo state
+- An external dependency, access issue, or platform step blocks progress
+- A major risky adaptation is needed AND the docs don't settle it
+- A phase gate is reached (feature branch gate, core-upgrade approval gate, post-upgrade resume)
+
+❌ **Do NOT ask the user for routine decisions the repo can answer:**
+- Whether a grep/search should be run
+- Whether a package is used (check package.json)
+- Whether a step applies (check the repo first)
+- Whether docs should be read (always yes)
+- Whether the next task should execute (yes, unless it's `[x]` or `[-]`)
+- Whether a file needs modification (check file first)
+- Whether a build/lint/test step should run (use tasks)
+
+### Good Prompts vs Bad Prompts
+
+✅ **Good prompts are:**
+- Concise (1–2 sentences)
+- Specific (about a real ambiguity or blocker)
+- About decisions the user must actually make
+
+**Example**: "The docs require either the Nx styles array pattern OR Sass @import pattern. The repo doesn't clarify which. Should I use pattern A or B?"
+
+❌ **Bad prompts:**
+- Vague ("What should I do next?")
+- Routine ("Should I read this page?")
+- Deferring responsibility ("I don't know how to proceed")
+
+### Ambiguity Rule (CRITICAL)
+
+**If you do not understand the documentation well enough to act safely:**
+- 🛑 **STOP immediately**
+- ❌ Do NOT guess or improvise
+- ✅ Record the ambiguity in MIGRATION_PROGRESS.md (add note section)
+- ✅ Ask one concise question following the "Good prompts" format above
+
+**Example ambiguity**:
+- Docs say "Update component X or Y"
+- Repo has BOTH X and Y
+- Docs don't clarify which one
+
+**Your action**:
+```
+❌ DON'T guess: Update both components
+✅ DO ask: "Docs mention updating component X or Y. 
+            Repo has both. Should I update A, B, or both?"
+```
+
+---
+
 ## Orchestrator Rules
 
 ### Command Routing
@@ -221,11 +278,11 @@ IF npm test fails or pending:
 
 ## State Markers (Use These Only)
 
-| Marker | Meaning | When to use |
-|--------|---------|------------|
-| `[ ]` | Not started | Task discovered but not executed |
-| `[x]` | Completed | Task executed, all 8 evidence fields filled, validation passed |
-| `[-]` | Not applicable | Repository doesn't need this task (evidence-based or skipped) |
+| Marker | Meaning        | When to use                                                    |
+| ------ | -------------- | -------------------------------------------------------------- |
+| `[ ]`  | Not started    | Task discovered but not executed                               |
+| `[x]`  | Completed      | Task executed, all 8 evidence fields filled, validation passed |
+| `[-]`  | Not applicable | Repository doesn't need this task (evidence-based or skipped)  |
 
 ## Anti-Patterns (Strictly Forbidden)
 
@@ -252,11 +309,11 @@ IF npm test fails or pending:
 
 ## Summary: Agent Responsibilities
 
-| Agent | Responsibility | Invocation | Output |
-|-------|-----------------|-----------|--------|
-| **Orchestrator** | Route commands, manage skip~N, track state | "Start Phase 1" / "Continue execution" / "Skip~N" / "Status" | 1 delegated action or status report |
-| **Planner** | Discover tasks, create plan, perform Phase 1 | Called by orchestrator on "Start Phase 1" | MIGRATION_PROGRESS.md + task tree |
-| **Executor** | Execute ONE task, collect evidence, validate | Called by orchestrator on "Continue execution" / "Validate" | 1 completed task [x] with full evidence |
+| Agent            | Responsibility                               | Invocation                                                   | Output                                  |
+| ---------------- | -------------------------------------------- | ------------------------------------------------------------ | --------------------------------------- |
+| **Orchestrator** | Route commands, manage skip~N, track state   | "Start Phase 1" / "Continue execution" / "Skip~N" / "Status" | 1 delegated action or status report     |
+| **Planner**      | Discover tasks, create plan, perform Phase 1 | Called by orchestrator on "Start Phase 1"                    | MIGRATION_PROGRESS.md + task tree       |
+| **Executor**     | Execute ONE task, collect evidence, validate | Called by orchestrator on "Continue execution" / "Validate"  | 1 completed task [x] with full evidence |
 
 **Golden Rule**: 
 - Orchestrator orchestrates (routes, no execution)

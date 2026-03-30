@@ -329,13 +329,13 @@ git checkout MIGRATION_PROGRESS.md
 
 ## Summary
 
-| Principle | Why | How to Verify |
-|-----------|-----|----------------|
-| Read first | Agents operate on stale memory | Agent mentions file read in output |
-| One source of truth | Prevent inconsistency | File state matches agent claims |
-| Verify before acting | Prevent assumptions | Agent checks repo/file before executing |
-| Update immediately | Prevent lost updates | File updated before agent stops |
-| Never batch | Prevent partial failures | Agent executes exactly 1 task per invocation |
-| Delegate with context | Prevent knowledge loss | Orchestrator passes file state to other agents |
+| Principle             | Why                            | How to Verify                                  |
+| --------------------- | ------------------------------ | ---------------------------------------------- |
+| Read first            | Agents operate on stale memory | Agent mentions file read in output             |
+| One source of truth   | Prevent inconsistency          | File state matches agent claims                |
+| Verify before acting  | Prevent assumptions            | Agent checks repo/file before executing        |
+| Update immediately    | Prevent lost updates           | File updated before agent stops                |
+| Never batch           | Prevent partial failures       | Agent executes exactly 1 task per invocation   |
+| Delegate with context | Prevent knowledge loss         | Orchestrator passes file state to other agents |
 
 **If any principle is violated → Context is lost → Migration may fail.**

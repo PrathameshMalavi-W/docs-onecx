@@ -63,19 +63,25 @@ If unclear: Ask agent to clarify, verify agent re-read file for context
 
 ### 4. Execute Phase A (Loop)
 
-``` (agents ALWAYS READ FILE FIRST)**:
+```
+@migration-orchestrator-v6 Continue execution
+```
+
+**What happens per invocation (agents ALWAYS READ FILE FIRST)**:
 1. Agent reads `MIGRATION_PROGRESS.md` (verify state)
 2. Agent finds first [ ] uncompleted task
 3. Agent executes that task EXACTLY
-4. Agent runs build/lint/test validation (captures output)
+4. Agent validates by **inspection** (not npm build):
+   - Grep: Old imports removed? New imports added?
+   - Template: Old components replaced? New components added?
+   - Config: Changes applied correctly? No duplicates?
+   - Compare to working examples in workspace
 5. Agent updates `MIGRATION_PROGRESS.md` WITH FULL EVIDENCE
 6. Agent stops
 
-**Between invocations**: Always check `MIGRATION_PROGRESS.md` to verify agent read state correctly picks first uncompleted task
-2. Executes that task
-3. Runs build/lint/test validation
-4. Updates MIGRATION_PROGRESS.md
-5. Stops
+**Why not npm build in Phase A?**: Project won't compile until ALL tasks complete. Use inspection validation instead.
+
+**Between invocations**: Always check `MIGRATION_PROGRESS.md` to verify agent processed correctly.
 
 **Repeat** until Phase A complete (usually 5-10 tasks)
 
@@ -87,10 +93,10 @@ Agent prepares:
 - Commit message ready
 
 **You do**:
-1. Run `npm run build`
-2. Run `npm run test`
+1. Run `npm run build` (NOW it should pass)
+2. Run `npm run test` (verify green)
 3. Upgrade Angular core (official tools)
-4. Run `npm run test` (verify green)
+4. Run `npm run test` (verify still green)
 
 **Tell agent**:
 ```
@@ -100,12 +106,13 @@ All tests green, proceed to Phase C
 ### 6. Phase C (Post-Migration)
 
 ```
-@migration-orchestrator-v6 Continue Phase C
+@migration-orchestrator-v6 Continue execution
 ```
 
 Agent:
 - Cleans up Angular 18-specific rules
-- Installs PrimeNG v19
+- Handles PrimeNG v19 migration
+- Installs required PrimeNG modules (CheckboxModule, ButtonModule, MessageModule)
 - Final validation
 - Coverage report
 
@@ -113,9 +120,170 @@ Agent:
 
 ---
 
-## Skip Tasks (Save Credits/Time)
+## ⚠️ Phase Gates & Approval Boundaries
 
-Use `skip~N` to mark N tasks as completed and move to task N+1.
+**Three critical phase transition gates** (learn them):
+
+### Gate 1: Feature Branch (Phase 1 Start)
+
+**Automatic check**: When you invoke Phase 1, agent verifies you're on a feature branch.
+
+```
+❌ Agent STOPS if: Current branch is main, master, or develop
+✅ Agent CONTINUES if: On any feature branch
+```
+
+**What you should do**:
+```bash
+git checkout -b feature/angular-19-upgrade  # Before Phase 1
+```
+
+**Why**: Protects main branch from incomplete changes. Every developer gets their own branch.
+
+---
+
+### Gate 2: Core Upgrade Approval (Phase B Gate - EXPLICIT APPROVAL REQUIRED)
+
+**This is the hard stop.** Agent will NOT perform the core Angular upgrade without explicit user approval.
+
+**Before Phase B**, agent prepares:
+- Summary of all Phase A changes (what was modified)
+- Working tree status (git diff summary)
+- Validation checklist (what passed, what failed)
+- Upgrade cheat-sheet (what core upgrade command to run)
+
+**Then agent asks**:
+```
+Ready to approve core Angular upgrade?
+All Phase A tasks completed. Requirements:
+
+✓ Phase A complete (all templates/imports/configs updated)
+✓ npm run build passes (after Phase A only)
+✓ npm run test passes (green)
+
+Awaiting your approval to upgrade @angular/core and related packages.
+
+Shall I proceed?
+```
+
+**Your decision points**:
+```
+YOU SAY                          WHAT HAPPENS
+─────────────────────────────────────────────────────
+"Yes, approve upgrade"          →  Agent runs npm upgrade, core upgrade
+"No, wait"                       →  Agent pauses, stays ready for approval
+"Help me debug this first"       →  Agent stops, you fix locally, then re-ask
+"Skip this, something's wrong"   →  Agent marks Phase B not applicable, jumps to C
+```
+
+**CRITICAL**: Agent does NOT perform upgrade automatically
+- Approval ≠ Execution by you (you don't run the command)
+- Approval = Permission (agent will run the command for you)
+- You're signing off on the current state being ready
+
+**Why**: Gives you final go/no-go. Prevents agent from upgrading while you're debugging.
+
+---
+
+### Gate 3: Post-Upgrade Resume (Phase C Gate)
+
+**After core upgrade completes**, agent verifies:
+- Build still passes (npm run build)
+- Tests still pass (npm run test)
+- No new errors introduced
+
+**Then agent asks**:
+```
+Core upgrade complete.
+Build: ✓ passing | Tests: ✓ passing
+
+Ready to proceed to Phase C cleanup?
+```
+
+**Your options**:
+```
+YOU SAY                        WHAT HAPPENS  
+──────────────────────────────────────────────────────
+"Yes, continue"                →  Agent executes Phase C cleanup
+"Wait, I need to investigate"  →  Agent pauses, awaits your signal
+"Rollback"                     →  Agent suggests git reset-hard to last good commit
+```
+
+**Why**: Phase C removes old Angular 18 rules and deprecated code. Don't do this until core upgrade is stable.
+
+---
+
+## Phase Transition Checkpoint Template
+
+**Use this before crossing any gate:**
+
+```bash
+# Gate 1 (Phase 1 → Phase A)
+git branch  # Show current branch ✓
+
+# Gate 2 (Phase A → Phase B) - APPROVAL GATE
+git diff --stat  # Show changed files
+npm run build    # Verify passes
+npm run lint     # Verify 0 errors
+npm run test     # Verify passes
+
+# Gate 3 (Phase B → Phase C)  
+npm run build    # Verify still passes
+npm run test     # Verify still passes (coverage vs baseline)
+```
+
+**Never cross a gate if** any checkpoint fails. Ask agent for help before approving.
+
+---
+
+## Phase Transition Safety
+
+If you're uncertain before a gate:
+1. Don't approve yet
+2. Ask agent: "Let me investigate first"
+3. Agent pauses (doesn't proceed)
+4. You run commands locally, check status
+5. Ask agent to show checkpoint summary again
+6. Then approve or ask for modification
+
+**The gates exist to prevent**: Halfway completions, broken builds, silent failures.
+
+---
+
+## ⚠️ Important Constraints
+
+### Prohibited Component Replacements
+
+**NEVER replace these components** (no replacement exists):
+- `<ocx-portal-viewport>`: Keep as-is
+- `<ocx-shell>`: Keep as-is
+
+Agent will check BEFORE attempting replacement. If agent tries anyway, it's broken.
+
+### Phase A Validation
+
+Phase A uses **inspection validation only**, NO `npm build`:
+- ✅ Grep for imports (show removed/added)  
+- ✅ Check templates (show old→new components)
+- ✅ Verify config changes (show before/after)
+- ✅ Compare to working examples (show reference)
+- ❌ Do NOT run npm build (project won't compile yet)
+
+Build validation happens in **Phase B** (manual validation).
+
+### PrimeNG Migration
+
+**Also migrate according to**: https://primeng.org/migration/v19
+
+Key changes:
+- `InputTextareaModule` → `TextareaModule`
+- Add `CheckboxModule`, `ButtonModule`, `MessageModule` to shared module exports
+- `p-checkbox [label]` → separate `<label>` element
+- Check guide for other module name changes
+
+---
+
+## Skip Tasks (Save Credits/Time)
 
 ### Example
 
@@ -148,15 +316,15 @@ You have 12 pre-migration tasks. You know tasks 1-3 don't apply.
 
 ## Commands (Quick Reference)
 
-| Command | What It Does |
-|---------|------------|
-| `Start Phase 1` | Begin initialization and planning |
-| `Continue execution` | Run next uncompleted task |
-| `Skip~3` | Mark next 3 tasks as not applicable, jump to task 4 |
-| `Validate` | Re-run validation on latest task |
-| `Status` | Show current phase and progress |
-| `Help` | Show command menu |
-| `Rollback` | Reset to last commit (git reset --hard) |
+| Command              | What It Does                                        |
+| -------------------- | --------------------------------------------------- |
+| `Start Phase 1`      | Begin initialization and planning                   |
+| `Continue execution` | Run next uncompleted task                           |
+| `Skip~3`             | Mark next 3 tasks as not applicable, jump to task 4 |
+| `Validate`           | Re-run validation on latest task                    |
+| `Status`             | Show current phase and progress                     |
+| `Help`               | Show command menu                                   |
+| `Rollback`           | Reset to last commit (git reset --hard)             |
 
 ---
 
@@ -312,12 +480,12 @@ Then merge to main (same PR, different repos)
 
 **Typical migration costs**:
 
-| Phase | Tasks | Time | Credits |
-|-------|-------|------|---------|
-| Phase 1 | 1 | 5-10 min | medium |
-| Phase A | 8-12 | 30-60 min | high |
-| Phase B | 1 | 10-30 min | low |
-| Phase C | 3-5 | 15-30 min | medium |
+| Phase     | Tasks   | Time        | Credits  |
+| --------- | ------- | ----------- | -------- |
+| Phase 1   | 1       | 5-10 min    | medium   |
+| Phase A   | 8-12    | 30-60 min   | high     |
+| Phase B   | 1       | 10-30 min   | low      |
+| Phase C   | 3-5     | 15-30 min   | medium   |
 | **Total** | **~20** | **1-2 hrs** | **high** |
 
 **Tips to save credits**:

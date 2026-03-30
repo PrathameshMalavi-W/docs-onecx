@@ -1,0 +1,13 @@
+Okay so the v7 -> angular 20
+and v8 -> angular 19
+
+so i need to prepare the migration guide for onecx application angular 20 to angular 21
+
+the migration guide needs to similar to current Refer the docs\docs\modules\onecx-portal-ui-libs\pages\migrations\angular-19
+which is migration of angular 18 (v5) to angular 19 (v6)
+
+Also check and compare for changes in @directory:v7 and @directory:v8
+So you need to compare the both the v7-files.md and v8-files.md (compiled files into single doc)
+So you need to compare the both the v7 CHANGELOG.md and v8 CHANGELOG.md
+
+
