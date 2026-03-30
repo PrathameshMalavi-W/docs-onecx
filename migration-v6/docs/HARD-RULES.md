@@ -113,7 +113,8 @@ When a hard rule is violated, the agent:
 - ✅ Run: `npm run build` (must pass, 0 errors after changes)
 - ✅ Run: `npm run lint` (must be 0 errors, 0 warnings)  
 - ✅ Run: `npm run test` (must pass, compare coverage % to baseline)
-- ❌ If ANY validation fails: mark `[ ]` (not started) and STOP
+- ✅ Interim Phase C tasks may record validation failures and continue ONLY when the failure is explicitly deferred to the post-Phase-C validation loop
+- ❌ If final post-migration validation fails: do NOT mark Phase C or the migration complete
 - 🛑 Enforce always
 
 **Why**: Prevents broken changes from slipping through; catches real bugs immediately.
@@ -211,10 +212,11 @@ When a hard rule is violated, the agent:
 ---
 
 ### H19: No Halfway Completion
-- ❌ Do NOT mark task complete if any step failed
+- ❌ Do NOT mark task complete if any required step failed
 - ✅ All 8 evidence fields required before `[x]` mark
 - ✅ Verification checklist must pass before mark
-- ❌ If ANY part of task is incomplete: stay `[ ]`
+- ✅ Phase C exception: an individual cleanup task may be `[x]` with a recorded deferred validation error, but ONLY if that error is explicitly logged for the post-Phase-C validation loop
+- ❌ Do NOT mark the overall Phase C / migration complete until final build/lint/test all pass
 - 🛑 Enforce strict
 
 **Why**: Prevents hidden bugs; forces complete execution.

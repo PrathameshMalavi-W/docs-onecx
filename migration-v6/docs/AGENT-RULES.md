@@ -259,16 +259,18 @@ IF npm test fails or pending:
 
 ---
 
-## Phase Transitions (No Gating)
+## Phase Transitions (Explicit Gating)
 
 ### Phase 1 → Phase A
 - Automatic when planner completes
 - Pattern: "Planning complete. Ready for Phase A. Command: "Continue execution""
 
 ### Phase A → Phase B
-- Automatic when all Phase A tasks marked [x]
-- Pattern: Orchestrator detects end of Phase A
-- Developer must manually sign off in MIGRATION_PROGRESS.md Phase B section
+- Manual approval gate when all Phase A tasks marked [x]
+- Pattern: Orchestrator asks explicit Yes/No for core upgrade
+- If **Yes**: fetch relevant Angular/Nx docs, execute upgrade task
+- If **No**: fetch relevant Angular/Nx docs, provide manual cheatsheet, wait for developer to run upgrade
+- If response is **neither Yes nor No**: default to **Yes** and proceed with doc fetch + upgrade task
 
 ### Phase B → Phase C
 - Manual transition (user must confirm)

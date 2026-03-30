@@ -62,11 +62,12 @@ Execution loop:
    ```
 
 6. **Validate**
-   - Run: npm run build (full output)
-   - Run: npm run lint (must be 0 errors, 0 warnings)
-   - Run: npm run test (check baseline vs new results)
-   - If fails: Capture 20 lines error, map root cause, stay [ ]
-   - If passes: Update state to [x] completed
+   - Run: npm run build (or `npm:build` task)
+   - Run: npm run lint (or `npm:lint` task)
+   - Run: npm run test -- --watch=false (or `npm:test` task)
+   - Phase A: all 3 must pass before marking [x]
+   - Phase C: run all 3 each task; if failures are transitional, record them and continue (see Phase C recovery), then close all failures at end
+   - Always capture error output and map root cause
 
 7. **Stop**
    - Do NOT execute next task
@@ -98,7 +99,8 @@ Decision Points:
 **Build, lint, or test fails?**
 → ✅ YOU MUST FIX IT. This is part of the task completion.
 → Steps: (1) Capture last 50 lines of error, (2) Map root cause, (3) Fix in code/config, (4) Retest
-→ ❌ NEVER mark [x] with failing build/lint/test.
+→ ❌ NEVER mark [x] with failing build/lint/test in Phase A.
+→ ✅ In Phase C, you may mark the task [x] after task implementation if failure is clearly transitional and fully recorded for end-of-phase recovery.
 → ❌ NEVER defer validation failure to next run.
 → Record all attempts (show full journey) in progress file.
 
@@ -236,8 +238,8 @@ Phase C rules (Post-Migration Cleanup):
 - **Context**: Post-Phase-B build/test might still fail (expected during transitions)
 - **Your job**: Complete ALL Phase C tasks (don't stop at first validation failure)
 - **Tasks**: Remove Angular 18-specific rules, PrimeNG v19 migrations, final configs
-- **Error handling**: Track errors during Phase C, continue to next task
-- **After Phase C**: Revisit recorded errors to verify they're now fixed (see Error Recovery Loop)
+- **Error handling**: Track errors during individual Phase C tasks, continue to the next task, and defer resolution to the post-Phase-C validation loop
+- **After Phase C**: Revisit every recorded error and rerun full validation; ONLY mark Phase C / migration complete when `npm run build`, `npm run lint`, and `npm run test` all pass
 - **Coverage**: Compare baseline vs final
 - **Note**: Different from Phase A which requires immediate error fixing
 
@@ -255,23 +257,24 @@ Error handling (Critical):
 
 **PHASE C SPECIAL CASE - Post-Migration Error Recovery**:
 
-During Phase C (post-upgrade cleanup), build/test failures are EXPECTED and should NOT block you:
+During Phase C (post-upgrade cleanup), build/test failures are EXPECTED during individual cleanup tasks and should NOT block that task sequence:
 
-1. **During Phase C task**: If `npm build` fails
+1. **During Phase C task**: If `npm build` or `npm test` fails
    - ✓ Record the error in MIGRATION_PROGRESS.md (with full output)
-   - ✓ Mark task [x] COMPLETE (task execution done)
-   - ✓ Move to NEXT Phase C task (don't stop)
-   - Why: Errors likely fixed by later Phase C cleanup tasks
+   - ✓ Mark the individual task `[x]` COMPLETE (task execution done)
+   - ✓ Move to the NEXT Phase C task (don't stop)
+   - ❌ Do NOT treat this as overall Phase C or migration completion
+   - Why: Errors are often fixed by later Phase C cleanup tasks
 
-2. **After ALL Phase C tasks done**:
+2. **After ALL Phase C tasks are done**:
    - ✓ Rerun: `npm run build` and `npm run lint` and `npm run test`
-   - ✓ For each previous error: Check if NOW FIXED
-   - ✓ Update MIGRATION_PROGRESS.md: Show which errors resolved by later tasks
-   - ✓ If error STILL FAILING: Document and ask for manual fix
+   - ✓ For each previous error: Check if it is NOW FIXED and update MIGRATION_PROGRESS.md
+   - ✅ Only when all three validations pass may you mark post-migration validation / migration complete
+   - ❌ If ANY build/lint/test error still remains: leave the migration BLOCKED / not complete, document the remaining failure, and continue fixing or ask for manual help
 
 Example journey:
 
-```
+```text
 Phase C Task 1: "Remove deprecated API imports"
   ✗ Build fails: "Component Old still uses this API"
   ✓ Record error, mark [x], move on
@@ -281,7 +284,9 @@ Phase C Task 2: "Update components to new API"
 
 After Phase C complete:
   ✓ npm build: PASSING (previous error is fixed!)
+  ✓ npm test: PASSING
   ✓ Update progress: "Build error from Task 1 → FIXED by Task 2"
+  ✓ Only now may the migration be marked complete
 ```
 
 **CONTEXT PRESERVATION**:
@@ -426,13 +431,13 @@ Target versions: @angular/core 19.2.1, nx 20.0.1 (if applicable)
 Yes - Execute upgrade automatically
 No - I'll prepare documentation for manual execution"
 
-DEFAULT: Yes (if no response in 30 seconds, assume Yes)
+DEFAULT POLICY: If response is neither explicit Yes nor explicit No, treat it as Yes.
 ```
 
 **Record user's choice**:
 
 ```
-- User choice: Yes | No
+- User choice: Yes | No | Auto-Yes (non-yes/no input)
 - Timestamp: [when decision made]
 - If No reason: [user's reason if provided]
 ```
@@ -524,7 +529,7 @@ Special handling:
 **nx migrate** (Version-Aware, User Permission Gate):
 
 - Step 1-4: Follow Version-Aware Upgrade Protocol (detect context, fetch docs, parse versions, resolve stable)
-- Step 5: **ASK USER**: "Should I proceed with Nx migration?" (Default: Yes, Timeout: 30 sec)
+- Step 5: **ASK USER**: "Should I proceed with Nx migration?" (If response is not Yes/No, default to Yes)
 - IF YES (Step 6):
   - Sequence: `nx migrate 20.0.1` → `npm install` → `nx migrate --run-migrations`
   - Record: "Migrated Nx from 19.x to 20.0.1 (per docs requirement, user approved)"
@@ -535,7 +540,7 @@ Special handling:
 **Angular upgrade** (if non-Nx, Version-Aware, User Permission Gate):
 
 - Step 1-4: Follow Version-Aware Upgrade Protocol (detect context, fetch docs, parse versions, resolve stable)
-- Step 5: **ASK USER**: "Should I proceed with Angular 19 upgrade?" (Default: Yes, Timeout: 30 sec)
+- Step 5: **ASK USER**: "Should I proceed with Angular 19 upgrade?" (If response is not Yes/No, default to Yes)
 - IF YES (Step 6):
   - Execute: `npm install @angular/core@19.2.1 @angular/common@19.2.1 @angular/platform-browser@19.2.1 @angular/forms@19.2.1 @angular/router@19.2.1` (all @angular packages to same version)
   - Record: "Upgraded @angular/core from ^18.5.0 to 19.2.1 (per docs requirement, user approved)"
@@ -581,40 +586,22 @@ Before replacing ANY component:
    - If pattern different: Ask why or use example pattern
 ```
 
-**Validation Strategy (Phase A: Inspection Only, No Build)**:
+**Validation Strategy (Phase A and Phase C)**:
 
 ```
-Phase A tasks cannot use npm build/lint/test for validation
-(Project won't compile until all tasks complete)
+For every execution task that changes code/config/manifests, run all three:
+1) npm run build
+2) npm run lint
+3) npm run test -- --watch=false
 
-Instead, validate by inspection:
+Phase A:
+- All three must pass to mark [x].
+- If any fails, fix in same invocation and rerun until passing.
 
-1. Import verification:
-   ✓ Old imports removed: grep -r "old import" src/
-   ✓ New imports added: grep -r "new import" src/
-   ✓ Pattern matches docs: Compare to documented examples
-
-2. Component replacement verification:
-   ✓ Old component removed: grep -r "<old-component" src/
-   ✓ New component added: grep -r "<new-component" src/
-   ✓ No syntax errors: Check brackets, parentheses, semicolons
-
-3. Configuration changes:
-   ✓ Config object updated: Show before/after of file
-   ✓ Deduplication applied: If in bootstrap.ts, removed from .ts
-   ✓ No duplicate entries: Verify single source of truth
-
-4. Working example comparison:
-   ✓ Find working example in workspace (if available)
-   ✓ Compare YOUR changes to example pattern
-   ✓ If pattern different: Document why or use example
-
-Record in MIGRATION_PROGRESS.md:
-- Source pages visited
-- Verification steps taken
-- Grep/inspection results (show output)
-- Comparison to working example (if found)
-- Final outcome: changes correct per inspection
+Phase C:
+- Still run all three after each task.
+- Transitional failures are allowed only if fully documented and linked to pending Phase C tasks.
+- After all Phase C tasks: rerun build/lint/test and resolve/close every recorded failure.
 ```
 
 **Verification Checklist (To Prevent Halfway Completion)**:
@@ -676,7 +663,7 @@ If task relates to above patterns:
    "I did 50% of the task" → Mark [ ], complete all subtasks
 
 ❌ Pattern 2: Build During Phase A
-   "Build failed, reverting changes" → Don't build until Phase B
+   "Build failed, reverting changes" → Do not revert and skip. Fix root cause and rerun validations in the same invocation.
 
 ❌ Pattern 3: Guessed Implementations
    "MCP gave unrelated code, I'll use it anyway" → Verify with workspace examples first
@@ -732,5 +719,7 @@ Anti-patterns YOU PREVENT:
 Helpful references:
 
 - [MIGRATION_PROGRESS Template](../templates/MIGRATION_PROGRESS.template.md)
+- [AGENT-RULES.md](../docs/AGENT-RULES.md)
+- [HARD-RULES.md](../docs/HARD-RULES.md)
 - [Evidence Collection Guide](../docs/EVIDENCE-COLLECTION.md)
 - [Error Mapping](../docs/ERROR-MAPPING.md)

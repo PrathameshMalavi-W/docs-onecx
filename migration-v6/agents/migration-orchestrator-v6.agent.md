@@ -64,7 +64,7 @@ Core rules (ENFORCE THESE):
 - Do NOT mix tasks (one task per execution cycle)
 - Agent count: MAXIMUM 3 (orchestrator + planner + executor)
 - No special agents for special tasks - executor handles all
-- When to Ask User: See [AGENT-RULES.md](../docs/AGENT-RULES.md#when-to-ask-the-user-always-ask-immediately)
+- When to Ask User: See [AGENT-RULES.md](../docs/AGENT-RULES.md)
 - Hard Rules: See [HARD-RULES.md](../docs/HARD-RULES.md) (H1–H20, non-negotiable constraints)
 
 **CONTEXT PRESERVATION (NON-NEGOTIABLE)**:
@@ -87,7 +87,7 @@ Anti-patterns you PREVENT:
 
 Helpful references:
 
-- [Usage Guide](../USAGE.md)
+- [Template quick start](../templates/QUICK-START.md)
 - [AGENT-RULES.md](../docs/AGENT-RULES.md) - When to ask user, Ambiguity Rule
 - [HARD-RULES.md](../docs/HARD-RULES.md) - Non-negotiable constraints H1–H20
 - [RUNTIME-DISCOVERY-PIPELINE.md](../docs/RUNTIME-DISCOVERY-PIPELINE.md) - How planner discovers tasks
@@ -138,12 +138,14 @@ Validations:
 Ready to approve core Angular upgrade?
 
 This is an explicit approval gate. YOU decide if state is ready.
-After approval, agent will perform: npm install && upgrade packages
+After approval, agent will fetch relevant Angular/Nx docs and execute the upgrade task.
+If not approved, agent will still fetch relevant Angular/Nx docs, provide a manual cheatsheet, and wait.
 ```
 
 3. **Await explicit response**:
-   - "Yes, approve upgrade" → Route to executor for core-upgrade, then Phase B
-   - "No, wait" → Pause, await next signal
+   - "Yes, approve upgrade" → Route to executor for core-upgrade task (with runtime doc fetch), then proceed to Phase B tracking
+   - "No" / "No, wait" → Route to executor to produce manual Angular/Nx upgrade cheatsheet from docs, then pause until developer confirms manual upgrade completion
+   - Any response other than clear Yes/No → Default to Yes (route to executor for core-upgrade task with runtime doc fetch)
    - "Help debug" → Agent investigates, awaits your signal
    - "Skip this, jump to C" → Mark Phase B not applicable, jump to Phase C
 

@@ -165,7 +165,7 @@ Ready to approve core Angular upgrade?
 
 ### 7. V2/V3 Borrowing Analysis
 
-**Created**: `docs/V2-V3-BORROWING-PLAN.md` (~450 lines)
+**Created**: `readme/V2-V3-BORROWING-PLAN.md` (~450 lines)
 
 **Contains**:
 - Feature analysis matrix (V2/V3 vs V6 current)
@@ -195,7 +195,7 @@ Updated `AGENT-RULES.md` description to mention "When agents ask users"
 ### New Files (3)
 - `docs/HARD-RULES.md` (450 lines)
 - `docs/RUNTIME-DISCOVERY-PIPELINE.md` (350 lines)
-- `docs/V2-V3-BORROWING-PLAN.md` (450 lines)
+- `readme/V2-V3-BORROWING-PLAN.md` (450 lines)
 
 ### Updated Files (5)
 - `docs/AGENT-RULES.md` (+70 lines)
@@ -307,6 +307,6 @@ V6 now has the discipline and formality from v2/v3 (explicit policies, hard rule
 
 ---
 
-*See [V2-V3-BORROWING-PLAN.md](docs/V2-V3-BORROWING-PLAN.md) for full analysis.*  
+*See [V2-V3-BORROWING-PLAN.md](readme/V2-V3-BORROWING-PLAN.md) for full analysis.*  
 *See [HARD-RULES.md](docs/HARD-RULES.md) for all 20 constraints.*  
 *See [USAGE.md](USAGE.md#phase-gates--approval-boundaries) for phase gate details.*

@@ -113,10 +113,10 @@ Agent:
 - Cleans up Angular 18-specific rules
 - Handles PrimeNG v19 migration
 - Installs required PrimeNG modules (CheckboxModule, ButtonModule, MessageModule)
-- Final validation
+- Final validation (`npm run build`, `npm run lint`, `npm run test` must all pass)
 - Coverage report
 
-**Done.**
+**Done only when build, lint, and tests are all green.**
 
 ---
 
@@ -355,8 +355,10 @@ Agent: [Prepares Phase B handover]
 You: [Performs core Angular upgrade]
 You: "All tests green, proceed to Phase C"
 
-Agent: [Executes Phase C, final validation]
-Agent: "Migration complete. Status: successful"
+Agent: [Executes Phase C, records deferred errors task-by-task if needed]
+Agent: [Runs final post-migration build/lint/test validation]
+Agent: "Migration complete. Status: successful"   # only if all validations pass
+# If any validation still fails, agent keeps status blocked and does NOT mark complete
 ```
 
 ---

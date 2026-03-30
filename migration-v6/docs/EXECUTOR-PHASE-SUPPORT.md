@@ -25,9 +25,9 @@ The executor agent now understands **three distinct migration phases** with diff
 ### Phase C (Post-Migration): After Core Upgrade
 - Task execution focused on cleanup and configuration
 - Multiple tasks interact (remove old API → use new API cascades)
-- Build/test failures expected until ALL Phase C tasks complete
-- **Error behavior**: Record errors, continue, revisit after all tasks done
-- **Validation**: Deferred to post-Phase-C loop
+- Build/test failures may be expected until ALL Phase C tasks complete
+- **Error behavior**: Record errors during individual tasks, continue, and revisit after all tasks are done
+- **Validation**: Deferred to the post-Phase-C loop, but overall completion still requires green `build`, `lint`, and `test`
 
 ---
 
@@ -163,6 +163,8 @@ Post-Phase-C Validation Loop:
   For each error: Rerun, check if fixed
   Update progress
   Final validation: npm build/lint/test
+  Only if all are green -> mark migration complete
+  Otherwise -> keep status blocked until fixed
 ```
 
 ---

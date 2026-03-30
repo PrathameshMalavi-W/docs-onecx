@@ -235,19 +235,23 @@ When asked to use agents, provide full path:
 │   ├── MIGRATION_PROGRESS.template.md         # Copy to repo as MIGRATION_PROGRESS.md
 │   └── README.md                              # Quick start guide
 │
-└── docs/                                      # Reference documentation, 3500+ lines
-    ├── AGENT-RULES.md                         # When agents ask, ambiguity rule
-    ├── HARD-RULES.md                          # 20 non-negotiable constraints
-    ├── NEVER-SKIP-ALWAYS-FIX-PROTOCOL.md      # Task completion rules
-    ├── VERSION-AWARE-UPGRADE-PROTOCOL.md      # Version handling, ^X→stable
-    ├── MULTI-PHASE-ERROR-TRACKING.md          # Phase A vs C error handling
-    ├── EXECUTOR-PHASE-SUPPORT.md              # Phase behavior overview
-    ├── RUNTIME-DISCOVERY-PIPELINE.md          # Doc discovery process
-    ├── CONTEXT-PRESERVATION-MANDATE.md        # State maintenance
+├── docs/                                      # Agent-only runtime docs
+│   ├── AGENT-RULES.md                         # When agents ask, ambiguity rule
+│   ├── HARD-RULES.md                          # 20 non-negotiable constraints
+│   ├── NEVER-SKIP-ALWAYS-FIX-PROTOCOL.md      # Task completion rules
+│   ├── VERSION-AWARE-UPGRADE-PROTOCOL.md      # Version handling, ^X→stable
+│   ├── MULTI-PHASE-ERROR-TRACKING.md          # Phase A vs C error handling
+│   ├── EXECUTOR-PHASE-SUPPORT.md              # Phase behavior overview
+│   ├── RUNTIME-DISCOVERY-PIPELINE.md          # Doc discovery process
+│   ├── CONTEXT-PRESERVATION-MANDATE.md        # State maintenance
+│   ├── SKIP-FUNCTIONALITY.md                  # Skip~N command reference
+│   └── STRICT-DOC-EXPANSION.md                # No-assumption doc expansion rule
+│
+└── readme/                                    # Human-only background reading
+    ├── README.md                              # Reading guide / background index
     ├── REAL-WORLD-FINDINGS.md                 # 10 real issues & fixes
     ├── V6-REAL-WORLD-IMPROVEMENTS.md          # V6 quality improvements
-    ├── V2-V3-BORROWING-PLAN.md                # Design patterns from v2/v3
-    └── SKIP-FUNCTIONALITY.md                  # Skip~N command reference
+    └── V2-V3-BORROWING-PLAN.md                # Design patterns from v2/v3
 ```
 
 ### Agent Files Explained
@@ -526,21 +530,21 @@ Current: @angular/core ^18.5.0 → Target: 19.2.1"
 
 ### Key Files Location
 
-| File | Purpose | Location |
-|------|---------|----------|
-| MIGRATION_PROGRESS.md | State file (single source of truth) | Repo root |
-| Agents | Executable migration logic | .github/migration-v6/agents/ |
-| Docs | Reference documentation | .github/migration-v6/docs/ |
-| Templates | Initial templates | .github/migration-v6/templates/ |
+| File                  | Purpose                             | Location                        |
+| --------------------- | ----------------------------------- | ------------------------------- |
+| MIGRATION_PROGRESS.md | State file (single source of truth) | Repo root                       |
+| Agents                | Executable migration logic          | .github/migration-v6/agents/    |
+| Docs                  | Reference documentation             | .github/migration-v6/docs/      |
+| Templates             | Initial templates                   | .github/migration-v6/templates/ |
 
 ### Documentation by Topic
 
-| Topic | File | Read Time |
-|-------|------|-----------|
-| Agent behavior | AGENT-RULES.md | 5 min |
-| Version handling | VERSION-AWARE-UPGRADE-PROTOCOL.md | 15 min |
-| Error handling | MULTI-PHASE-ERROR-TRACKING.md | 10 min |
-| All constraints | HARD-RULES.md | 10 min |
+| Topic            | File                              | Read Time |
+| ---------------- | --------------------------------- | --------- |
+| Agent behavior   | AGENT-RULES.md                    | 5 min     |
+| Version handling | VERSION-AWARE-UPGRADE-PROTOCOL.md | 15 min    |
+| Error handling   | MULTI-PHASE-ERROR-TRACKING.md     | 10 min    |
+| All constraints  | HARD-RULES.md                     | 10 min    |
 
 ---
 

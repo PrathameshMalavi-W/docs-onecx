@@ -55,7 +55,7 @@
 
 ### New Documentation
 
-**docs/REAL-WORLD-FINDINGS.md**:
+**readme/REAL-WORLD-FINDINGS.md**:
 - Lists all findings from actual migrations
 - Shows root causes
 - Maps to v6 solutions  

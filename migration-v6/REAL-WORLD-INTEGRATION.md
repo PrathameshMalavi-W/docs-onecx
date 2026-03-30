@@ -168,8 +168,8 @@
 
 ### New Documentation Files
 ```
-+ docs/REAL-WORLD-FINDINGS.md (all findings mapped to solutions)
-+ docs/V6-REAL-WORLD-IMPROVEMENTS.md (improvements summary)
++ readme/REAL-WORLD-FINDINGS.md (all findings mapped to solutions)
++ readme/V6-REAL-WORLD-IMPROVEMENTS.md (improvements summary)
 ```
 
 ### INDEX.md
@@ -233,11 +233,11 @@ These issues require coordination beyond v6 scope:
 
 ## Recommendation for Users
 
-1. **Read**: REAL-WORLD-FINDINGS.md first (understand what failed)
-2. **Understand**: V6-REAL-WORLD-IMPROVEMENTS.md (see how it's fixed)
-3. **Execute**: Use USAGE.md and agents as normal
-4. **Verify**: Check MIGRATION_PROGRESS.md between each task
-5. **Report**: Any new issues found should update REAL-WORLD-FINDINGS.md
+1. **Read**: `readme/REAL-WORLD-FINDINGS.md` first (understand what failed)
+2. **Understand**: `readme/V6-REAL-WORLD-IMPROVEMENTS.md` (see how it's fixed)
+3. **Execute**: Use `USAGE.md` and agents as normal
+4. **Verify**: Check `MIGRATION_PROGRESS.md` between each task
+5. **Report**: Any new issues found should update `readme/REAL-WORLD-FINDINGS.md`
 
 ---
 
@@ -248,7 +248,7 @@ Migration-v6 is now designed to **capture new findings**:
 ```
 If you discover an issue during migration:
 1. Document it (what happened, root cause)
-2. Add to REAL-WORLD-FINDINGS.md
+2. Add to `readme/REAL-WORLD-FINDINGS.md`
 3. Update executor/planner/orchestrator to prevent it
 4. Result: V6 improves with each migration
 ```

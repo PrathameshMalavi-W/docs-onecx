@@ -74,6 +74,7 @@ Task 2: "Remove deprecated API usage from component B"
 AFTER ALL Phase C TASKS:
 5. Rerun validation
 6. Update progress: "Build error from Task 1 → FIXED by Task 2"
+7. ONLY mark the migration complete if `npm run build`, `npm run lint`, and `npm run test` are all green; otherwise keep final status blocked
 ```
 
 **Why Different**:
@@ -281,8 +282,9 @@ For each recorded Phase C error:
    
    NO:
    - Document: "Persists after Phase C complete"
-   - Likely needs manual developer fix
-   - Report to orchestrator
+   - Keep final migration status: BLOCKED / INCOMPLETE
+   - Do NOT mark success yet
+   - Report to orchestrator or ask for manual developer fix
 ```
 
 ### Step 5: Final Validation
@@ -292,6 +294,13 @@ npm run build    # Full output
 npm run lint     # 0 errors, 0 warnings?
 npm run test     # All passing?
 npm run coverage # Compare to baseline
+
+IF all of build/lint/test pass:
+  - Mark post-migration validation complete
+  - Mark migration complete
+ELSE:
+  - Keep migration status blocked / incomplete
+  - Record remaining failures and do NOT declare success
 
 Update MIGRATION_PROGRESS.md with final validation results
 ```
@@ -330,7 +339,8 @@ Update MIGRATION_PROGRESS.md with final validation results
 ✅ Scan all Phase C tasks for recorded errors  
 ✅ Rerun build/lint/test for each  
 ✅ Update progress with results  
-✅ Report any still-failing errors
+✅ Report any still-failing errors  
+✅ Mark the overall migration complete ONLY when final build/lint/test are all passing
 
 ### Rule 4: Never Hide Errors
 
