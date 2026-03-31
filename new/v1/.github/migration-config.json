@@ -1,0 +1,67 @@
+{
+  "migration": {
+    "targetAngularVersion": "19",
+    "projectName": "onecx-ahe",
+    "repository": "d:\\onecx\\Ahe",
+    "gitBranch": "feature/angular-migration"
+  },
+  "mcp": {
+    "servers": [
+      {
+        "name": "onecx-docs",
+        "enabled": true,
+        "query": "mcp_onecx-docs-mc_about_onecx"
+      },
+      {
+        "name": "primeng",
+        "enabled": true,
+        "query": "mcp_primeng_*"
+      },
+      {
+        "name": "nx",
+        "enabled": true,
+        "query": "nx migration angular"
+      }
+    ]
+  },
+  "fallbackUrls": {
+    "onecx": "https://onecx.github.io/docs/documentation/current/onecx-portal-ui-libs/migrations/angular-{VERSION}/",
+    "primeng": "https://primeng.org/migration/v{VERSION}",
+    "nx": "https://nx.dev/docs/technologies/angular/migrations"
+  },
+  "nodeModulesChangelogs": {
+    "primeng": "node_modules/primeng/CHANGELOG.md",
+    "nx": "node_modules/nx/CHANGELOG.md",
+    "angular": "node_modules/@angular/core/CHANGELOG.md"
+  },
+  "phases": {
+    "phase1": {
+      "skipIfCompleted": true,
+      "requiresApproval": true
+    },
+    "phaseA": {
+      "haltAfterEachTask": true,
+      "validateAfterEachTask": true
+    },
+    "phaseB": {
+      "defaultOwnership": "assistant",
+      "askForOwnership": true
+    },
+    "phaseC": {
+      "errorCaptureLines": 50,
+      "primengMigrationRequired": true,
+      "nxMigrationRequired": "auto"
+    }
+  },
+  "validation": {
+    "buildLintTestOrder": ["build", "lint", "test"],
+    "requireAllPass": true,
+    "ciEnvironment": true,
+    "errorLogMinLines": 50
+  },
+  "customRules": {
+    "readUserCustomRulesFile": true,
+    "userCustomRulesPath": "USER_CUSTOM_RULES.md",
+    "overrideDefaults": true
+  }
+}

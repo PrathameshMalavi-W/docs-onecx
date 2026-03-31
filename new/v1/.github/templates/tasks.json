@@ -1,0 +1,101 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm:build",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "run",
+        "build"
+      ],
+      "detail": "Builds the entire Nx workspace or Angular project.",
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": [],
+      "presentation": {
+        "showReuseMessage": false,
+        "close": false,
+        "panel": "dedicated"
+      },
+      "options": {
+        "env": {
+          "CI": "true"
+        }
+      }
+    },
+    {
+      "label": "npm:lint",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "run",
+        "lint"
+      ],
+      "detail": "Runs linter on the entire codebase.",
+      "group": "test",
+      "isBackground": false,
+      "problemMatcher": [],
+      "presentation": {
+        "showReuseMessage": false,
+        "close": false,
+        "panel": "dedicated"
+      },
+      "options": {
+        "env": {
+          "CI": "true"
+        }
+      }
+    },
+    {
+      "label": "npm:test",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "run",
+        "test",
+        "--",
+        "--watch=false",
+        "--code-coverage"
+      ],
+      "detail": "Runs all tests once (no watch mode) with code coverage.",
+      "group": "test",
+      "isBackground": false,
+      "problemMatcher": [],
+      "presentation": {
+        "showReuseMessage": false,
+        "close": false,
+        "panel": "dedicated"
+      },
+      "options": {
+        "env": {
+          "CI": "true"
+        }
+      }
+    },
+    {
+      "label": "npm:build-lint-test",
+      "type": "process",
+      "command": "npm",
+      "args": [
+        "run",
+        "build"
+      ],
+      "detail": "Executes full validation sequence: build → lint → test (requires sequential execution)",
+      "group": "test",
+      "dependsOn": ["npm:lint", "npm:test"],
+      "dependsOrder": "sequence",
+      "isBackground": false,
+      "presentation": {
+        "showReuseMessage": false,
+        "close": false,
+        "panel": "dedicated"
+      },
+      "options": {
+        "env": {
+          "CI": "true"
+        }
+      }
+    }
+  ]
+}
